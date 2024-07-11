@@ -1,44 +1,44 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-import InputBox from "./inputBox";
-import Button from "./button";
-import img1 from "../../assets/Authentic/LoginImagesBackground.jpg";
-import googleImg from "../../assets/Authentic/google.svg";
-import appleImg from "../../assets/Authentic/apple.svg";
-import Head from "./Head";
-import './Auth.css';
-function LoginPage() {
+
+export default function Login() {
+
   return (
-    <div className="AllPage_ flex h-screen w-screen box-border text-[#01090f] font-['Comfortaa'] bg-[url('../../assets/Authentic/bgc.jpg')] overflow-hidden">
-      {/*<div className="loginPageBox">*/}
-      <div className="imgBox w-1/2 h-screen">
-        <img className="w-full h-full object-cover" src={img1} alt="helo" />
-      </div>
-      <div className="entryFieldBox m-[40px] w-[40vw] bg-[#fff] p-[10px] pb-[30px] rounded-[10px]">
-        <Head />
-        <form className=" flex flex-col items-center justify-center -z-[1]" action="/loginPage" method="post">
-          <InputBox title="Email" type="email" phText="Enter your email" />
-          <InputBox title="Password" type="text" phText="Enter your password" />
-          <Button text="Login" />
-        </form>
-        <div className="or font-semibold text-center text-[20px] my-[10px] mx-0 relative z-[1] py-0 px-[30px]">
-          <span className="w-full font-semibold text-[20px] my-[10px] mx-0 bg-[#fff] py-0 px-[30px]">or</span>
+    <>
+      
+
+
+        <div className="">
+
+
+
+
+          <div>
+
+            <form action="#" className="flex flex-col gap-6 mt-[30px]">
+              <div>
+                <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg" type="text" placeholder="Email Address" required />
+              </div>
+              <div>
+                <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg" type="password" placeholder="Password" required />
+              </div>
+              <div className="ml-7 text-xl text-rose-400"><a href="#">Forgot Password?</a></div>
+
+
+              <div className="text-center bg-gradient-to-r from-rose-500 to-rose-800 text-white w-80 rounded-xl h-[45px] [b-3] ml-[35px] mb-[20px]">
+                <input className="text-2xl pt-2" type="submit" value="Login" />
+              </div>
+            </form>
+          </div>
+          <div className="text-center text-xl mt-3">Not a member? <a href="#" className=" text-rose-400">Signup now</a></div>
         </div>
 
-        <div className="bottom-Side-logo-login ml-[26%] transition-all duration-[0.2s]">
-          <div className="p-[5px] w-[20vw] border-[2px] border-[#e75e56] rounded-[5px] mb-[10px] flex items-center justify-center transition-all duration-[0.2s] hover:scale-[1.04] hover:bg-[#e75e56] hover:text-[#fff] hover:transition-all hover:duration-[0.2s] ">
-            <img className="w-[30px] h-[30px] border-[#c841f1] rounded-[50%] mr-[10px]" src={googleImg} alt="" />
-            Login with Google
-          </div>
-          <div className="p-[5px] w-[20vw] border-[2px] border-[#e75e56] rounded-[5px] mb-[10px] flex items-center justify-center transition-all duration-[0.2s] hover:scale-[1.04] hover:bg-[#e75e56] hover:text-[#fff] hover:transition-all hover:duration-[0.2s] ">
-            <img className="w-[30px] h-[30px] border-[#c841f1] rounded-[50%] mr-[10px]" src={appleImg} alt="" />
-            Login with Apple
-          </div>
-        </div>
-      </div>
-      {/*</div>*/}
-    </div>
+      
+
+
+
+
+
+
+
+    </>
   )
 }
-
-export default LoginPage;

@@ -1,39 +1,46 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-import InputBox from "./inputBox";
-import Button from "./button";
-import img1 from "../../assets/Authentic/LoginImagesBackground.jpg";
-import googleImg from "../../assets/Authentic/google.svg";
-import appleImg from "../../assets/Authentic/apple.svg";
-import Head from "./Head";
-import './Auth.css';
-function SignUpPage() {
-  return (
-    <div className="AllPage_ flex h-screen w-screen box-border text-[#01090f] font-['Comfortaa'] bg-[url('../../assets/Authentic/bgc.jpg')] overflow-hidden">
-      <div className="imgBox w-1/2 h-screen">
-        <img className="w-full h-full object-cover" src={img1} alt="helo" />
-      </div>
-      <div className="entryFieldBox m-[40px] w-[40vw] bg-[#fff] p-[10px] pb-[30px] rounded-[10px]">
-        <Head />
-        <form className="z-[1] flex flex-col items-center justify-center" action="/registrationPage" method="post">
-          <InputBox title="Name" type="text" phText="Enter your name" />
-          <InputBox title="Email" type="email" phText="Enter your email" />
-          <InputBox title="Password" type="text" phText="Enter your password" />
-          <InputBox title="Confirm Password" type="text" phText="Confirm your password" />
-          <Button text="Signup" />
-        </form>
 
-        <div className="or font-semibold text-center text-[20px] my-[10px] mx-0 relative z-[1] py-0 px-[30px]">
-          <span className="w-full font-semibold text-[20px] my-[10px] mx-0 bg-[#fff] py-0 px-[30px]">or</span>
-        </div>
+export default function Signup (){
+    
+    return(
+      <>
+       
+      
 
-        <div className="bottom-Side-logo-signup flex items-center gap-10 justify-center">
-          <img className="w-[40px] h-[40px] border-[#c841f1] rounded-[50%]" src={googleImg} alt="" />
-          <img className="w-[40px] h-[40px] border-[#c841f1] rounded-[50%]" src={appleImg} alt="" />
+      <div className="">
+        
+
+
+        <div>
+         
+          <form action="#" className="flex flex-col gap-6 mt-[30px]">
+            <div>
+              <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg" type="text" placeholder="Email Address" required/>
+            </div>
+            <div>
+              <input className="h-[30px] w-80 ml-[30px] p-[20px] border-2 border-gray-400 rounded-lg"type="password" placeholder="Password" required/>
+            </div>
+            <div>
+              <input className="h-[45px] w-80 ml-[30px] py-[20px] px-[20px] border-2 border-gray-400 rounded-lg" type="password" placeholder="Confirm password" required/>
+            </div>
+            <div className="ml-3 px-3"><input type="checkbox"/> I agree with the user's terms and conditions</div>
+            <div className="text-center bg-gradient-to-r from-rose-500 to-rose-800 text-white w-80 rounded-xl h-[45px] [b-3] ml-[35px] mb-[20px]">
+              <input className="text-2xl pt-2" type="submit" value="Signup"/>
+            </div>
+          </form>
+          
+          
+          
         </div>
       </div>
-    </div>
-  );
+      
+    
+
+      
+      
+      
+      
+      
+      
+      </>  
+    )
 }
-
-export default SignUpPage;

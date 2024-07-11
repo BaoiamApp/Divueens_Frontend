@@ -257,8 +257,7 @@ function Footer() {
                   href="/"
                   className="text-black/80 transition hover:underline"
                 >
-                  {" "}
-                  Terms & Conditions{" "}
+                  Terms & Conditions
                 </a>
               </li>
 
@@ -267,8 +266,7 @@ function Footer() {
                   href="/"
                   className="text-black/80 transition hover:underline"
                 >
-                  {" "}
-                  Privacy Policy{" "}
+                  Privacy Policy
                 </a>
               </li>
 
@@ -277,8 +275,8 @@ function Footer() {
                   href="/"
                   className="text-black/80 transition hover:underline"
                 >
-                  {" "}
-                  Cookies{" "}
+                  
+                  Cookies
                 </a>
               </li>
             </ul>
