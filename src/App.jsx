@@ -15,7 +15,6 @@ import HelpCenter from "./pages/HelpCenter";
 import FaqsPage from "./pages/FAQ";
 import SpecialOffer from "./pages/SpecialOffer";
 import ProductDetails from "./pages/ProductDetails";
-import Profile from './pages/Profile'
 
 function App() {
   return (

@@ -54,6 +54,8 @@ const ProductList = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth > 1024);
 
+    const [isPrices, setPrices] = useState(false);
+
     const handleCate = () => {
         setcategory(!isCategory)
     }
@@ -71,6 +73,10 @@ const ProductList = () => {
     }
     const handleOffer = () => {
         setOffer(!isOffer)
+    }
+
+    const handlePrices = () => {
+        setPrices(!isPrices)
     }
 
     const changeData = (val) => {
@@ -175,7 +181,7 @@ const ProductList = () => {
                                     <div className='grid grid-cols-2 gap-2'>
                                         {dropdown.map((d) => {
                                             return <div key={d.id} className='flex items-center relative group'>
-                                                <button onClick={() => { handleDropdownClick(d.id), d.func, handleDropdownClick('dropdown-1') }} className='border-rose-600 border text-rose-700 px-4 py-2 w-full rounded-lg flex items-center justify-between font-medium text-[15px]' >
+                                                <button onClick={() => { handleDropdownClick(d.id), d.func }} className='border-rose-600 border text-rose-700 px-4 py-2 w-full rounded-lg flex items-center justify-between font-medium text-[15px]' >
                                                     {d.name}
 
                                                     <IoIosArrowDown className={`transition-all duration-[0.3s] ease-in-out ${openDropdown === d.id ? 'rotate-180' : 'rotate-0'}`} size={20} />
@@ -185,15 +191,15 @@ const ProductList = () => {
                                                 {openDropdown === d.id && (
                                                     <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
                                                         {/* when clicked on any option the menu will be closed */}
-                                                        <ul className="py-2 text-sm" onClick={() => setShowMenu(false)} data-dropdown-id="dropdown-1">
+                                                        <ul className="py-2 text-sm" onClick={() => setShowMenu(false)}>
                                                             {d.options.map((p, index) => {
-                                                                return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}>
-                                                                    <p
-                                                                        onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}
+                                                                return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name)}>
+                                                                    <Link
+                                                                        href={''}
                                                                         className="text-gray-800  hover:text-gray-900"
                                                                     >
                                                                         {p}
-                                                                    </p>
+                                                                    </Link>
                                                                 </li>
                                                             })}
                                                         </ul>
@@ -221,14 +227,14 @@ const ProductList = () => {
                                         <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
                                             <ul className="py-2 text-sm">
                                                 {d.options.map((p, index) => {
-                                                    return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}>
+                                                    return <li key={index} className="px-4 py-2 hover:bg-gray-100" onClick={() => d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name)}>
 
-                                                        <p
-                                                            onClick={() => { d.name === 'Category' ? filterItemsCategory(p) : checkDName(p, d.name); setOpenDropdown(null); }}
+                                                        <Link
+                                                            href={''}
                                                             className="text-gray-800  hover:text-gray-900"
                                                         >
                                                             {p}
-                                                        </p>
+                                                        </Link>
                                                     </li>
                                                 })}
                                             </ul>
@@ -238,11 +244,32 @@ const ProductList = () => {
                             })}
 
                         </div>
+                        {/* Price Sorting */}
+                        {/* <div className='relative'>
+                            <button onClick={handlePrices} className='border border-[#d4d4d4] px-4 py-2 rounded-full flex items-center gap-2'>
+                                <span>Prices</span> <IoIosArrowDown size={15} />
+                            </button>
+
+                            {isPrices && (
+                                <div className="absolute top-10 left-0 rounded-md shadow-lg bg-[#fff] w-48 z-50">
+                                    <ul className="py-2 text-sm">
+                                        <li className="px-4 py-2 hover:bg-gray-100">
+                                            <Link
+                                                href={''}
+                                                className="text-gray-800  hover:text-gray-900"
+                                            >
+                                                p
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )}
+                        </div> */}
                     </div>
                 </div>
 
                 {/* Filters and Cards */}
-                <div onClick={() => setOpenDropdown(null)} className='flex flex-col w-full lg:flex-row '>
+                <div className='flex flex-col w-full lg:flex-row '>
                     {/* Filters */}
                     <div className='hidden lg:inline-flex'>
                         <Filter itemData={productDetails} changedFunction={changeData} />
