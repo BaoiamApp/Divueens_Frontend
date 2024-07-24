@@ -26,45 +26,85 @@ function FaqsPage() {
  
 const faqs = [
   {
-      question: "What are the best makeup products for sensitive skin?",
-      answer: "For sensitive skin, it's best to use hypoallergenic and fragrance-free makeup products. Look for brands that specialize in sensitive skin, such as Clinique, BareMinerals, and Almay."
+      question: "HOW DO I PLACE ORDER ON DIVUEENS?",
+      answer: "Select your desired products at Divueens and add them to the cart. Click on “Proceed To Buy” and fill in your details such as your name, phone number, the address you want your order to be shipped and proceed further. Select the mode of payment for your order and click on “Place My Order.”",
   },
   {
-      question: "How can I make my makeup last all day?",
-      answer: "To make your makeup last all day, start with a primer to create a smooth base. Use long-wearing foundations and powders, and set your makeup with a setting spray. Additionally, consider using waterproof mascara and eyeliner."
+      question: "HOW CAN I TRACK MY ORDER?",
+      answer: <div><p className='mb-2'>You can track your order from the “My Order” section. You can instantly check the status of your order and all the past orders. Click on the order you want to track and select the “Track” option. It will show you the current status of your order.</p>
+      <p >Some orders might take time to show the current status. Please wait for 6 hours after the order has been placed and check again to track and know the current status of your order.</p>
+      </div>
+    },   
+  {
+      question: " HOW DO I CANCEL ORDER ON DIVUEENS?",
+      answer: "Once you have placed an order, go to the “My Order” section and click on the order that you want to cancel. Once the order details show, there will be an option of “Cancel Order”. Click on it and choose a reason as to why you are cancelling the order from the list of reasons given or choose “Others” if your reason to cancel the order is not provided. Proceed further and your order will be cancelled. You can visit Divueens page and shop for your desired product again."
   },
   {
-      question: "What is the best way to remove makeup?",
-      answer: "The best way to remove makeup is to use a gentle makeup remover or cleansing oil. Follow up with a facial cleanser to ensure all residue is removed. It's important to be gentle, especially around the eye area, to avoid irritation."
+      question: "HOW CAN I CHANGE ADDRESS OR PHONE NUMBER IN ORDER?",
+      answer: <div><p className='mb-2'>If you wish to change the shipping address or phone number, you can do it through the “My Order” section before the products have been dispatched. You can see the edit icon on the order detail page. Fill in the new shipping address or the phone number and save it.</p>
+      <p> Please note that you cannot change the shipping address once the order has been shipped.</p>
+      </div>
+  },    
+  {
+      question: "HOW CAN I GET FREE ORDER DELIVERY?",
+      answer: "You can get free delivery on orders above Rs:499."
   },
   {
-      question: "How often should I clean my makeup brushes?",
-      answer: "You should clean your makeup brushes at least once a week to prevent the buildup of bacteria and ensure your makeup application is smooth and hygienic. Use a gentle brush cleaner or a mixture of baby shampoo and water."
+      question: "CAN I ASK FOR FASTEST DELIVERY REQUEST?",
+      answer: <div><p className='mb-2'>At Divueens we try to get your orders as soon as possible but if you want your order to reach you at your earliest then you can opt for the fastest delivery option. While you are placing an order, the date of the delivery is shown to you. You can opt for the date that you want your order to be shipped on and pay an amount that will be charged to you on your order depending on the day you select.</p>
+      <p> You can choose a date for fastest delivery and not pay the extra charges that are charged if you become a valued member at Divueens.</p>
+      </div>
   },
   {
-      question: "What are the essential makeup products for a beginner?",
-      answer: "For a beginner, the essential makeup products include foundation or BB cream, concealer, mascara, eyebrow pencil, blush, and a neutral eyeshadow palette. These basics will help you create a variety of looks without overwhelming you."
+      question: "CAN I ORDER SOME PRODUCT AS A GIFT?",
+      answer: "Yes, you can order products and send them as a gift to your friends or loved ones. After you choose the products you want to buy and proceed towards buying them, you will get an option of “Send as Gift”. Select that option and add the shipping address you want it to be delivered and the name of the receiver and proceed to the payment option."
   },
   {
-      question: "How do I choose the right foundation shade?",
-      answer: "To choose the right foundation shade, match the foundation to your jawline in natural light. The right shade should blend seamlessly into your skin without leaving a noticeable line. You can also ask for samples or test shades at a makeup counter."
+      question: "IF I GET ANY DEFECTIVE PRODUCT HOW WOULD I CONNECT WITH YOU?",
+      answer: "If you get a defective product you can take a picture and a video of the defective product and can connect with us from the homepage of Divueens where we provide you with our customer care email address. You can connect with us through our provided email and can also return the product that was defective by following the steps explained in the “How Would I Return The Product” section. "
   },
   {
-      question: "What are some tips for achieving a natural makeup look?",
-      answer: "For a natural makeup look, use a lightweight foundation or tinted moisturizer, and opt for neutral eyeshadows and blush. Define your brows and apply a coat of mascara. Finish with a nude or pink lip color for a fresh, effortless look."
+      question: "HOW WOULD I RETURN THE PRODUCT ?",
+      answer: <div>
+              <p>Returning of the products ordered from Divueens is only available for products that are:</p>
+              <ol >
+              <li>a. Damaged</li>
+              <li>b. Defective</li>
+              <li>c. If the wrong products were delivered</li>
+              <li>d. The product that was ordered was missing</li> 
+              </ol>
+              <p className='mb-2'>If you want to return the product due to above mentioned reasons, click on the “My Order” section and select the order that you want to return. Select “Return This Order” and select the reason as to why you are returning it from the list of reasons provided. Proceed further and share the image or the video of the product for our reference. Once your request is received, we will initiate the pick up of the item from you. Return the product to the person who comes to pick the way you received it with all the packaging.</p>
+              <p>Returns will not be accepted under the following conditions:</p>
+              <ol>
+              <li>a. If the request is initiated after 10 days of order delivery</li>
+              <li>b. If the product is used by the customer</li>
+              <li>c. If the product is damaged because of misuse or overuse by the customer</li>
+              <li>d. The product is the promotional product</li>
+              <li>e. Serial number is tampered</li>
+              <li>f. If the packaging misses certain things that were given when the order was delivered such as price tags, labels, original packaging, freebies and other accessories that were given with the packaging</li> 
+              </ol>
+      </div>
   },
   {
-      question: "How can I prevent my lipstick from smudging?",
-      answer: "To prevent your lipstick from smudging, start by applying a lip liner to define your lips and create a base. Apply your lipstick and blot with a tissue. You can also dust a light layer of translucent powder over your lips to set the color."
+      question: "WHAT SHOULD I DO IF I GET WRONG OR DAMAGE PRODUCT?",
+      answer: "You can raise your concerns by sending us an email using our customer care email address that is provided in the “Contact Us”. Send us the image or a video if the product is damaged. Also you can return the product by following the steps that have been mentioned in our “How Would I Return The Product?"
   },
   {
-      question: "What is the difference between bronzer and contour?",
-      answer: "Bronzer is used to add warmth and a sun-kissed glow to your skin, typically applied to areas where the sun naturally hits. Contour is used to create shadows and define your facial features, often applied under the cheekbones, along the jawline, and the sides of the nose."
-  },
-  {
-      question: "How do I care for my skin before applying makeup?",
-      answer: "Before applying makeup, ensure your skin is clean and well-moisturized. Use a gentle cleanser, followed by a toner and moisturizer suitable for your skin type. Applying a primer can also help create a smooth base for your makeup."
-  }
+    question: " HOW DO I SIGN UP FOR A DIVUEENS ACCOUNT?",
+    answer: "Click on the “Sign In/Sign Up” page. Fill in the required details such as your name, phone number, shipping address, email address, etc. and create a password for your account. Proceed further and create your account and enjoy your hassle free shopping."
+},
+{
+  question: "HOW CAN I UPDATE MY SHIPPING ADDRESS?",
+  answer: "If you want to update your shipping address, you can click on “My Profile” and select the “Edit” option. You can easily manage your profile and can update your shipping address."
+},
+{
+  question: "HOW CAN I RECOVER MY ACCOUNT IN CASE OF FORGOTTEN PASSWORD?",
+  answer: "In case you have forgotten your account password, you can click on “Forgotten Password” and can enter the email address or the phone number to get one time password. After entering the one time password, you can create a new password for your account and can continue using your account on Divueens."
+},
+{
+  question: "HOW DO I CHANGE OR UPDATE MY PERSONAL INFORMATION?",
+  answer: "You can change or update your personal information by going to the “My Profile” section. Click on the “edit” option and change or update your personal information and continue using your account without any problems."
+}
 ];
 
 

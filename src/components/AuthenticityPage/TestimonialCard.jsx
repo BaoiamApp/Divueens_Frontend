@@ -8,7 +8,7 @@ const TestimonialCard = ({ image, name, text, fullText }) => {
   };
 
   return (
-    <div className="text-center p-4 sm:w-72 w-full mx-auto">
+    <div className="text-center p-4 sm:w-80  lg:w-96 bg-rose-200 shadow-gray-400 shadow-outer shadow-lg h-80">
       <img
         src={image}
         alt={name}

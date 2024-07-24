@@ -6,7 +6,6 @@ import DiscountCode from '../components/OrderingGateway/DiscountCode'; // Import
 import FormComponent from '../components/OrderingGateway/FormComponent';
 import Slider from '../components/OrderingGateway/Slider'; // Import Slider component
 import PaymentOptions from '../components/OrderingGateway/PaymentOptions';
-
 const OrderDetails = () => {
   const [cart, setCart] = useState([
     { id: 1, name: 'Prime Red Luck Lipstick', quantity: 1 },

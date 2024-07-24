@@ -9,6 +9,7 @@ const DivaCoins = () => {
         <Hero />
         <Section1 />
         <Section2 />
+        
       </>
     )
 }

@@ -23,18 +23,18 @@ const TestimonialCarousel = () => {
 
   return (
     <div className="w-full relative flex flex-row items-center">
-      <button className="text-gray-600 absolute prevBtn border-[3px] border-black rounded-[50%] w-[30px] h-[30px] md:left-0 left-[-10px]">
+      <button className="text-gray-600 absolute prevBtn border-[3px] border-black rounded-[50%] w-[30px] h-[30px] md:left-0 left-[-10px] z-10">
         <FaArrowLeft size={20} className='mx-auto' />
       </button>
       <Swiper
         breakpoints={{
           200: {
             slidesPerView: 1,
-            spaceBetween: 15,
+            spaceBetween: 25,
           },
           376: {
             slidesPerView: 2,
-            spaceBetween: 15,
+            spaceBetween: 25,
           },
           800: {
             slidesPerView: 3,
@@ -42,7 +42,7 @@ const TestimonialCarousel = () => {
           },
           1240: {
             slidesPerView: 3,
-            spaceBetween: 15,
+            spaceBetween: 30,
           },
         }}
         modules={[FreeMode, Navigation]}
@@ -53,15 +53,15 @@ const TestimonialCarousel = () => {
           }
         }
         freeMode={true}
-        className=' bg-rose-200 w-[80%] p-4'
+        className='p-4'
       >
         {testimonials.map((data, index) => (
-          <SwiperSlide className='flex justify-center items-center' key={index}>
+          <SwiperSlide className='flex justify-center items-center ' key={index}>
             <TestimonialCard image={data.image} text={data.text} fullText={data.fullText} name={data.name} />
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="text-gray-600 absolute nextBtn border-[3px] border-black rounded-[50%] w-[30px] h-[30px] md:right-0 right-[-10px]">
+      <button className="text-gray-600 absolute nextBtn border-[3px] border-black rounded-[50%] w-[30px] h-[30px] md:right-0 right-[-10px] z-10">
         <FaArrowRight size={20} className='mx-auto'/>
       </button>
     </div>
