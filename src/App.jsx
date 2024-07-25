@@ -21,10 +21,11 @@ import MemberShip from "./pages/MemberShip";
 import VirtualTryOnPage from "./pages/VirtualTryOnPage";
 import Sell from "./pages/sellOnDivueens";
 import OrderDetails from "./pages/OrderDetails";
-import ProfilePage from "./pages/Profile";
+import ProfilePage from "./components/profilePage/ProfilePage";
 import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
 import AddToCart from "./components/ProductList/AddToCart";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   const { pathname } = useLocation();
@@ -53,7 +54,7 @@ function App() {
         <Route path="/coins" element={<DivaCoins />} />
         <Route path="/blogs" element={<BlogHome />} />
         <Route path="/frequently-asked-questions" element={<FaqsPage />} />
-        <Route path="/contact-us" element={<StoreLocator />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="/shipping-delivery" element={<></>} />
@@ -67,6 +68,7 @@ function App() {
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route path="/authenticity" element={<AuthenticityPage />} />
+        <Route path="/store-locator" element={<StoreLocator />} />
         <Route path="/addtocart" element={<AddToCart />} />
       </Routes>
       <Footer />

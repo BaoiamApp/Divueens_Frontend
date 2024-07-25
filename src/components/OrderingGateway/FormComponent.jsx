@@ -30,7 +30,7 @@ const FormComponent = () => {
       [name]: type === 'checkbox' ? checked : value,
     }));
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);

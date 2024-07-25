@@ -67,12 +67,16 @@ const baadiList = [
         txt: "Shipping and Delivery ",
       },
       {
+        url: "/privacy-policy",
+        txt: "Privacy Policy",
+      },
+      {
         url: "/sell-on-divueens",
         txt: "Sell on Divueens",
       },
       {
-        url: "/privacy-policy",
-        txt: "Privacy Policy",
+        url: "/store-locator",
+        txt: "Store Locator",
       },
     ],
   },
@@ -105,8 +109,8 @@ const baadiList = [
         txt: "New Launches",
       },
       {
-        url: "",
-        txt: "Divueens Fashion",
+        url: "/membership",
+        txt: "Membership",
       },
     ],
   },

@@ -5,14 +5,20 @@ import productData from '../components/OrderingGateway/productData'; // Import p
 import DiscountCode from '../components/OrderingGateway/DiscountCode'; // Import DiscountCode component
 import FormComponent from '../components/OrderingGateway/FormComponent';
 import Slider from '../components/OrderingGateway/Slider'; // Import Slider component
-import PaymentOptions from '../components/OrderingGateway/PaymentOptions';
+import { useNavigate } from 'react-router-dom';
+// import PaymentOptions from '../components/OrderingGateway/PaymentOptions' 
+import FormAddress from '../components/profilePage/GauravAndMahak/AddressPage' 
 
 const OrderDetails = () => {
+  const navigate = useNavigate();
   const [cart, setCart] = useState([
     { id: 1, name: 'Prime Red Luck Lipstick', quantity: 1 },
     { id: 2, name: 'Royal Eyeshadow Palette', quantity: 1 }
   ]);
 
+  const handleCheckout = () => {
+    navigate('/transaction');
+  };
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
 
@@ -55,7 +61,9 @@ const OrderDetails = () => {
       <div className="p-4 flex flex-col lg:flex-row min-h-screen">
         <div className="w-full lg:w-3/5 p-4">
         <h2 className="text-xl font-bold mb-5 ">General Information</h2>
-          <FormComponent/>
+          {/* <FormComponent/> */}
+          <FormAddress />
+          
         </div>
         <div className="w-full lg:w-2/5 p-4 flex flex-col justify-between">
           <div>
@@ -66,7 +74,7 @@ const OrderDetails = () => {
                 +Add a gift card/gift wrap
               </button>
             </div>
-            <div className="bg-rose-200 p-4 rounded-lg w-full">
+            <div className="bg-white shadow-2xl p-4 rounded-lg w-full">
               {cart.map((item) => {
                 const product = productData.find((p) => p.name === item.name);
                 return (
@@ -81,7 +89,7 @@ const OrderDetails = () => {
                       </p>
                       <p>Colour: {product.color}</p>
                       <p>Price: ${product.price}</p>
-                      <button className="text-black underline">Move to Favourites</button>
+                      <button className="text-rose-500">Move to Favourites</button>
                     </div>
                     <button onClick={() => setCart(cart.filter((i) => i.id !== item.id))} className="text-black">
                       🗑️
@@ -104,10 +112,10 @@ const OrderDetails = () => {
               handleDiscountCode={handleDiscountCode}
             />
           </div>
-          <div className='mt-2'><PaymentOptions/></div>
+          {/* <div className='mt-2'><PaymentOptions/></div> */}
           <div className="flex justify-end mt-7">
-            <button className="bg-rose-300 text-black py-2 px-6 mr-[2rem] xs:mr-12 rounded">Checkout</button>
-            <button className="bg-rose-200 text-black py-2 px-8 rounded">Cancel</button>
+            <button className="bg-rose-300 text-black py-2 px-6 mr-[2rem] xs:mr-12 rounded hover:bg-rose-400 shadow-lg" onClick={handleCheckout}>Checkout</button>
+            <button className="bg-rose-200 text-black py-2 px-8 rounded hover:bg-red-300 shadow-lg">Cancel</button>
           </div>
         </div>
       </div>
