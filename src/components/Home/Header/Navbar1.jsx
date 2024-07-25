@@ -8,7 +8,7 @@ import {
   FiTrendingUp,
 } from "react-icons/fi";
 import SearchBox from "./SearchBox";
-import { Link } from "react-router-dom";
+import { Link , NavLink} from "react-router-dom";
 import Auth from "../../Auth/Auth";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBars } from "react-icons/fa6";
@@ -84,7 +84,7 @@ const Navbar1 = ({ navItemText }) => {
               </div>
               <div className="hidden lg:flex space-x-6 text-slate-500">
                 <button className="md:pl-7 hover:text-rose-800">
-                  <FiShoppingCart size={20} />
+                <NavLink to="/addtocart"> <FiShoppingCart size={20} /> </NavLink>
                 </button>
                 <button className=" md:hover:text-rose-800">
                   <FiHeart size={20} />

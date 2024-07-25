@@ -51,8 +51,6 @@ const DivaCoins = () => {
 
       <div className="w-full">
         <div className="flex items-center flex-col justify-center w-full ">
-          {/* <h1 className="text-4xl m-4 text-white">Divueens</h1> */}
-
           <div className="bg-white mb-12 px-8 ms:px-12 py-8 rounded-xl w-full h-fit">
             <div className="flex flex-row items-center text-2xl pb-10 gap-3">
               <FaRegCircleQuestion />

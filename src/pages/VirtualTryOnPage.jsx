@@ -51,7 +51,7 @@ const VirtualTryOnPage = () => {
         {/* Image Compare */}
         <div className="w-full lg:w-auto">
           {/* Image */}
-          <img src='../src/assets/VirtualTryOn.png' className='width-[200px] lg:full mx-auto lg:m-0'/>
+          <img src='../src/assets/VirtualTryOn.png' className='width-[200px] lg:full mx-auto lg:m-0' />
         </div>
       </div>
       {/* How it works */}
@@ -60,9 +60,9 @@ const VirtualTryOnPage = () => {
         <p className='text-[30px] md:text-[40px] font-bold text-center lg:text-left mx-auto lg:mx-0'>How It Works</p>
         {/* Steps */}
         <div className='flex flex-col gap-y-7'>
-        {Data.map((step) => (
-          <div className="lg:inline-flex justify-start font-medium text-[15px] md:text-[18px] flex flex-col  gap-y-5  items-basline gap-3"> <p className='text-[18px] md:text-[20px] font-bold text-nowrap last:items-start'>{step.heading}</p> <p>{step.description}</p> </div>
-        ))}
+          {Data.map((step) => (
+            <div className="lg:inline-flex justify-start font-medium text-[15px] md:text-[18px] flex flex-col  gap-y-5  items-basline gap-3"> <p className='text-[18px] md:text-[20px] font-bold text-nowrap last:items-start'>{step.heading}</p> <p>{step.description}</p> </div>
+          ))}
         </div>
       </div>
       {/* FAQs */}

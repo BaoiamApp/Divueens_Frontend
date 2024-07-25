@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kalnia+Glaze:wght@100..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-light-1: #FBBDBB;
-  --color-light-2: #E9ACB6;
-  --color-light-3: #F2C8D7;
-  --color-light-4: #FEAED2;
-  --color-light-5: #FF5BB1;
-  --color-light-6: #F8E2EA;
+  --color-light-1: #fbbdbb;
+  --color-light-2: #e9acb6;
+  --color-light-3: #f2c8d7;
+  --color-light-4: #feaed2;
+  --color-light-5: #ff5bb1;
+  --color-light-6: #f8e2ea;
 }
 
 * {
@@ -24,6 +25,12 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 /* -----------------------------------------------Navbar Style --------------------------------------------------------- */
@@ -111,12 +118,12 @@ body {
 
 .heading .hr-right {
   border-radius: 10px 0px 0px 10px;
-  background: linear-gradient(to left, #e9acb600, #e9acb646, #FF919D, #E93550);
+  background: linear-gradient(to left, #e9acb600, #e9acb646, #ff919d, #e93550);
 }
 
 .heading .hr-left {
   border-radius: 0px 10px 10px 0px;
-  background: linear-gradient(to right, #e9acb600, #e9acb646, #FF919D, #E93550);
+  background: linear-gradient(to right, #e9acb600, #e9acb646, #ff919d, #e93550);
 }
 
 .subheading {
@@ -167,11 +174,11 @@ body {
 footer[data-footer-part] {
   /* border-top-left-radius: 50px; */
   /* border-top-right-radius: 50px; */
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   /* background: linear-gradient(to bottom, #ffe4e6, #9f1239); */
   /* background: #ffe4e6; */
-  background:#cbd5e1;
-/*   background:radial-gradient(#f1f1f1, #a4a4a4) */
+  background: #cbd5e1;
+  /*   background:radial-gradient(#f1f1f1, #a4a4a4) */
 }
 
 /* .col_[data-footer-part]>ul>li>.footerList {
@@ -183,7 +190,6 @@ footer[data-footer-part] {
   text-decoration: underline;
 } */
 
-
 .socialIcons[data-footer-part] {
   text-align: center;
   font-size: 30px;
@@ -191,7 +197,7 @@ footer[data-footer-part] {
   cursor: pointer;
 }
 
-.socialIcons[data-footer-part]>a {
+.socialIcons[data-footer-part] > a {
   text-decoration: none;
   color: #4c0519;
 }
@@ -223,39 +229,37 @@ footer[data-footer-part] {
     justify-content: space-between;
   }
 
-  .col_[data-footer-part]:first-child>.logo>img {
+  .col_[data-footer-part]:first-child > .logo > img {
     margin-right: 5em;
     margin-top: 2em;
   }
 
-  .col_[data-footer-part]:first-child>ul>li {
+  .col_[data-footer-part]:first-child > ul > li {
     background-size: 16px 16px;
     background-position: 0% 40%;
   }
 
-  .col_[data-footer-part]>.drpBtn {
+  .col_[data-footer-part] > .drpBtn {
     width: 100%;
     display: flex;
     margin-top: 20px;
     border-bottom: 1px solid grey;
     justify-content: space-between;
-   
   }
 
-  .col_[data-footer-part]>h3 {
+  .col_[data-footer-part] > h3 {
     cursor: pointer;
   }
 
-  .col_[data-footer-part]>ul {
+  .col_[data-footer-part] > ul {
     margin-left: 15px;
   }
 
-
-  .col_[data-footer-part]>.close {
+  .col_[data-footer-part] > .close {
     display: none;
   }
 
-  .col_[data-footer-part]>.all_Items,
+  .col_[data-footer-part] > .all_Items,
   .btnShow {
     display: block;
   }
@@ -353,6 +357,6 @@ footer[data-footer-part] {
   text-shadow: 0 0 6px white;
 }
 
-.our_team .tint:hover+.bg-zoom-out {
+.our_team .tint:hover + .bg-zoom-out {
   transform: 0.9;
 }

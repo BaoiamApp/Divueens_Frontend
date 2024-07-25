@@ -50,6 +50,8 @@ import Brush from "./Shop_By_Category/Brush.webp";
 import Nails from "./Shop_By_Category/Nails.webp";
 import Lips from "./Shop_By_Category/Lips.webp";
 import Eyes from "./Shop_By_Category/Eyes.webp";
+import Hair from "./Shop_By_Category/Hair.png";
+import Perfume from "./Shop_By_Category/Perfume.png";
 
 import sub_1 from "./Subscription/1.png";
 import sub_2 from "./Subscription/2.png";
@@ -87,7 +89,7 @@ export {
   suntan,
 };
 
-export { background, Brush, Eyes, Lips, SkinCare, Nails, Face };
+export { background, Brush, Eyes, Lips, SkinCare, Nails, Face, Hair, Perfume };
 
 export {
   sub_1,
@@ -106,6 +108,18 @@ export { default as searchImage } from "./CarouselImages/searchIcon.svg";
 export { default as Lipstick } from "./lip2.png";
 export { default as Profile_Pic } from "./profile-pic.png";
 export { default as MemberShipImage } from "./MemberShip.jpeg";
+export { default as Pic57 } from "./pic57.png";
+export { default as Pic58 } from "./pic58.png";
+export { default as Pic59 } from "./pic59.png";
+export { default as Pic60 } from "./pic60.png";
+export {default as brand_2} from "./brand-2.jpeg";
+export {default as brand_3} from "./brand-3.png";
+export {default as product_1} from "./product-1.jpg";
+export {default as product_2} from "./product-2.jpeg";
+export {default as product_3} from "./product-3.jpeg";
+export {default as product_4} from "./product-4.jpg";
+export {default as product_5} from "./product-5.jpeg";
+export {default as product_6} from "./product-6.jpeg";
 
 export const imageUrls = [
   {

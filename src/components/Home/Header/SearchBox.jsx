@@ -103,13 +103,13 @@ const SearchBox = () => {
       <FiSearch className="absolute top-3 right-3 text-gray-400" />
       {
         showDropdown
-         && (
+        && (
           <div
             ref={dropdownRef}
             className="absolute w-full mt-0.5 bg-white border rounded-lg shadow-lg z-10"
           >
             <div className="py-4 px-6 text-sm ">
-              
+
               <h3 className="font-semibold mb-2 flex items-center text-gray-800 text-left">
                 <FiTrendingUp size={16} className="mr-2" />
                 Trending Searches

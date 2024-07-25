@@ -75,7 +75,7 @@ const CardItem = ({ item }) => {
                             </div>
                             <div className="flex items-end justify-between absolute bottom-6 sm:gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
                                 <span className="font-semibold text-[0.8rem] sm:text-[1rem] md:text-base lg:text-lg">₹ {p.price}</span>
-                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-1 lg:text-base'>Add To Cart</button>
+                                <button className='bg-rose-600 text-white md:w-[120px] rounded-full text-[0.7rem] sm:text-[0.8rem] px-2 py-1 md:p-3 lg:text-base' onClick={() => addingItemToCart(p.id)}>{isInCart ? "Remove from Cart" : "Add to Cart"}</button>
                             </div>
                         </div>
 

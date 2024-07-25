@@ -305,4 +305,3 @@ const Filter = ({ itemData, changedFunction, small }) => {
 };
 
 export default Filter
-

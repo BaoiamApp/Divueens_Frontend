@@ -24,6 +24,7 @@ import OrderDetails from "./pages/OrderDetails";
 import ProfilePage from "./pages/Profile";
 import Relate from "./pages/Relation";
 import AuthenticityPage from "./pages/AuthenticityPage";
+import AddToCart from "./components/ProductList/AddToCart";
 
 function App() {
   const { pathname } = useLocation();
@@ -44,7 +45,7 @@ function App() {
         {/* Login page
         <Route path="/login" element={<Auth />} /> */}
 
-        
+
         {/* Other Pages */}
         <Route path="/special-offers" element={<SpecialOffer />} />
         <Route path="/our-team" element={<TeamSection />} />
@@ -53,12 +54,12 @@ function App() {
         <Route path="/blogs" element={<BlogHome />} />
         <Route path="/frequently-asked-questions" element={<FaqsPage />} />
         <Route path="/contact-us" element={<StoreLocator />} />
-        <Route path="/help-center" element={<HelpCenter/>} />
+        <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
         <Route path="/shipping-delivery" element={<></>} />
         <Route path="/sell-on-divueens" element={<Sell />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/blogs" element={<BlogHome/>} />
+        <Route path="/blogs" element={<BlogHome />} />
         <Route path="/about-us" element={<WhoWeAre />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/membership" element={<MemberShip />} />
@@ -66,6 +67,7 @@ function App() {
         <Route path="/investor-relation" element={<Relate />} />
         <Route path="/virtual-try-on" element={<VirtualTryOnPage />} />
         <Route path="/authenticity" element={<AuthenticityPage />} />
+        <Route path="/addtocart" element={<AddToCart />} />
       </Routes>
       <Footer />
     </>
