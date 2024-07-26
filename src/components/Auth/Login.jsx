@@ -55,7 +55,7 @@ const Login = ({ move, setMove }) => {
           className="h-[50px] w-full mt-[50px]">
           <input
             className="h-full w-full outline-none pl-[15px] rounded-[15px] border-[1px] border-[solid] border-[lightgrey] border-b-2 text-[17px] [transition:all_0.3s_ease] focus:border-[#fda4af] placeholder:text-[#999] placeholder:[transition:all_0.3s_ease] focus:placeholder:text-[#fb7185]"
-            inputmode="numeric"
+            inputmode="text"
             placeholder="Name"
             required />
         </div>

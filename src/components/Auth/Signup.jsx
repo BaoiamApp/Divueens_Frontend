@@ -8,6 +8,7 @@ const Signup = ({ move, setMove }) => {
   const [otpV, setOtpV] = useState("");
   const [count, setCount] = useState(60);
   const [resendOTP, setResendOTP] = useState(false);
+  const [acceptTerms, setAcceptTerms] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -60,6 +61,16 @@ const Signup = ({ move, setMove }) => {
             ))}
           </div>
         </div>
+        <div className="flex items-center mb-[30px]">
+          <input
+            type="checkbox"
+            id="acceptTerms"
+            className="mr-2"
+            checked={acceptTerms}
+            onChange={(e) => setAcceptTerms(e.target.checked)}
+          />
+          <label htmlFor="acceptTerms" className="text-[16px]">I have read and agree to the Privacy Policy and Terms of Service.</label>
+        </div>
         <div className="flex">
           <div className='border mt-2 mr-[30px] w-[45%] px-4 py-2 text-black border-rose-400 bg-white rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
             <button type="button" onClick={() => setMove(true)}>
@@ -67,8 +78,8 @@ const Signup = ({ move, setMove }) => {
             </button>
           </div>
           <div className='border mt-2 w-[45%] px-4 py-2 text-white bg-gradient-to-l from-rose-700 to-rose-300 rounded-[15px] text-center text-[20px] font-medium cursor-pointer'>
-          <button >
-                <span>Send OTP</span>
+            <button type="submit" disabled={!acceptTerms}>
+              <span>Verify</span>
             </button>
           </div>
         </div>

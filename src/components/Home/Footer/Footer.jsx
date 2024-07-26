@@ -91,6 +91,10 @@ const baadiList = [
         url: "",
         txt: "Divueens Network",
       },
+      {
+        url: "/virtual-try-on",
+        txt: "Virtual TryOn",
+      },
     ],
   },
   {
