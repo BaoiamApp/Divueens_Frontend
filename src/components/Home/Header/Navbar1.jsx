@@ -84,23 +84,28 @@ const Navbar1 = ({ navItemText }) => {
               <div className="hidden lg:w-[70%] lg:block">
                 <SearchBox />
               </div>
+              
               <div className="hidden lg:flex space-x-6 text-slate-500">
                 <button className="relative md:pl-7 hover:text-rose-800 px-4">
-                <NavLink to="/addtocart"> <FiShoppingCart size={30} /> </NavLink>
-                <div className="absolute rounded-full top-0 right-0 w-[20px] h-[20px] bg-rose-600 text-white">{numCartItem}</div>
+                  <NavLink to="/addtocart"> <FiShoppingCart size={30} /> </NavLink>
+                  {numCartItem > 0 && (
+                    <div className="absolute rounded-full top-0 right-0 w-[20px] h-[20px] bg-rose-600 text-white flex items-center justify-center text-xs">
+                      {numCartItem}
+                    </div>
+                  )}
                 </button>
                 <NavLink to='/wishlist'>
-                <button className=" md:hover:text-rose-800">
-                  <FiHeart size={20} />
-                </button>
+                  <button className="md:hover:text-rose-800">
+                    <FiHeart size={20} />
+                  </button>
                 </NavLink>
                 {/* <NavLink to='/profile'> */}
-                <button
-                  className=" hover:text-rose-800"
-                  onClick={() => setDisplayAuth(true)}
-                >
-                  <FiUser size={20} />
-                </button>
+                  <button
+                    className="hover:text-rose-800"
+                    onClick={() => setDisplayAuth(true)}
+                  >
+                    <FiUser size={20} />
+                  </button>
                 {/* </NavLink> */}
               </div>
 

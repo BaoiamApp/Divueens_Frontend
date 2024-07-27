@@ -15,142 +15,188 @@ const menuItems = [
   { name: 'Offers', subheading: 'offers available for you'},
 ];
 
-const UPIComponent = () => (
-  <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-lg">
-    <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Pay by any UPI App</h2>
-    <hr className="mb-4 md:mb-5 lg:mb-6" />
+const UPIComponent = () => {
+  const navigate = useNavigate();
+  const [upiId, setUpiId] = useState('');
 
-    <div className="flex justify-start gap-3 mb-4 md:mb-5 lg:mb-6">
-      <FaGooglePay className="text-3xl md:text-4xl lg:text-4xl text-blue-500" />
-      <FaAmazonPay className="text-3xl md:text-4xl lg:text-4xl text-orange-500" />
-      <SiPaytm className="text-3xl md:text-4xl lg:text-4xl text-blue-600" />
-      <FaApplePay className="text-3xl md:text-4xl lg:text-4xl text-indigo-600" />
-    </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/confirm-order');
+  };
+  
+  return (
+    <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-lg">
+      <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Pay by any UPI App</h2>
+      <hr className="mb-4 md:mb-5 lg:mb-6" />
 
-    <button className="w-auto bg-black text-white py-2 md:py-2.5 lg:py-3 px-3 rounded-lg mb-4 md:mb-5 lg:mb-6 hover:bg-grey-600 transition duration-300">
-      Generate QR Code
-    </button>
-
-    <div className="flex items-center mb-6 md:mb-8 lg:mb-10">
-      <hr className="flex-grow border-gray-300" />
-      <span className="px-4 text-gray-500">OR</span>
-      <hr className="flex-grow border-gray-300" />
-    </div>
-
-    <div className="mb-4 md:mb-5 lg:mb-6">
-      <input
-        type="text"
-        placeholder="Enter UPI ID"
-        className="w-full p-2 md:p-2.5 lg:p-3 border border-gray-300 rounded-md outline-none"
-      />
-    </div>
-
-    <p className="text-sm md:text-base text-gray-600 mb-4">
-      A payment request will be sent to this upi id.
-    </p>
-
-    <button className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-600 transition duration-300">
-      Verify and Pay
-    </button>
-  </div>
-);
-
-const CreditCardComponent = () => (
-  <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
-    <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Credit & Debit Card</h2>
-    <hr className="mb-4 md:mb-5 lg:mb-6" />
-
-    <div className="flex justify-start gap-3 mb-4 md:mb-5 lg:mb-6">
-      <p className='text-gray-600 pr-3'>we accept:</p>
-      <RiVisaFill className="text-3xl md:text-4xl lg:text-4xl text-blue-800" />
-      <FaCcMastercard className="text-3xl md:text-4xl lg:text-4xl text-blue-800" />
-    </div>
-
-    <form>
-      <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cardNumber">
-          Card Number
-        </label>
-        <div className="relative">
-          <input
-            className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="cardNumber"
-            type="text"
-            placeholder="1234 5678 9012 3456"
-          />
-          <FaCreditCard className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-        </div>
+      <div className="flex justify-start gap-3 mb-4 md:mb-5 lg:mb-6">
+        <FaGooglePay className="text-3xl md:text-4xl lg:text-4xl text-blue-500" />
+        <FaAmazonPay className="text-3xl md:text-4xl lg:text-4xl text-orange-500" />
+        <SiPaytm className="text-3xl md:text-4xl lg:text-4xl text-blue-600" />
+        <FaApplePay className="text-3xl md:text-4xl lg:text-4xl text-indigo-600" />
       </div>
 
-      <div className="flex mb-4">
-        <div className="w-1/2 pr-2">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="expiryDate">
-            Expiry Date
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="expiryDate"
-            type="text"
-            placeholder="MM/YY"
-          />
-        </div>
-        <div className="w-1/2 pl-2">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cvv">
-            CVV
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="cvv"
-            type="text"
-            placeholder="123"
-          />
-        </div>
+      <button className="w-auto bg-black text-white py-2 md:py-2.5 lg:py-3 px-3 rounded-lg mb-4 md:mb-5 lg:mb-6 hover:bg-grey-600 transition duration-300">
+        Generate QR Code
+      </button>
+
+      <div className="flex items-center mb-6 md:mb-8 lg:mb-10">
+        <hr className="flex-grow border-gray-300" />
+        <span className="px-4 text-gray-500">OR</span>
+        <hr className="flex-grow border-gray-300" />
       </div>
 
-      <div className="mb-4 md:mb-5 lg:mb-6">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cardHolder">
-          Card Holder Name
-        </label>
-        <input
-          className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="cardHolder"
-          type="text"
-          placeholder="Diva"
-        />
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4 md:mb-5 lg:mb-6">
+          <input
+            type="text"
+            placeholder="Enter UPI ID"
+            className="w-full p-2 md:p-2.5 lg:p-3 border border-gray-300 rounded-md outline-none"
+            value={upiId}
+            onChange={(e) => setUpiId(e.target.value)}
+            required
+          />
+        </div>
 
-      <div className="flex items-center mb-4">
-        <FaLock className="text-gray-500 mr-2" />
-        <p className="text-sm md:text-base text-gray-600">
-          Your transaction is secured with SSL encryption
+        <p className="text-sm md:text-base text-gray-600 mb-4">
+          A payment request will be sent to this UPI ID.
         </p>
+
+        <button type="submit" className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-600 transition duration-300">
+          Verify and Pay
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const CreditCardComponent = () => {
+  const navigate = useNavigate();
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiryDate, setExpiryDate] = useState('');
+  const [cvv, setCvv] = useState('');
+  const [cardHolder, setCardHolder] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/confirm-order');
+  };
+  
+  return (
+    <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
+      <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Credit & Debit Card</h2>
+      <hr className="mb-4 md:mb-5 lg:mb-6" />
+
+      <div className="flex justify-start gap-3 mb-4 md:mb-5 lg:mb-6">
+        <p className='text-gray-600 pr-3'>We accept:</p>
+        <RiVisaFill className="text-3xl md:text-4xl lg:text-4xl text-blue-800" />
+        <FaCcMastercard className="text-3xl md:text-4xl lg:text-4xl text-blue-800" />
       </div>
 
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cardNumber">
+            Card Number
+          </label>
+          <div className="relative">
+            <input
+              className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="cardNumber"
+              type="text"
+              placeholder="1234 5678 9012 3456"
+              value={cardNumber}
+              onChange={(e) => setCardNumber(e.target.value)}
+              required
+            />
+            <FaCreditCard className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          </div>
+        </div>
+
+        <div className="flex mb-4">
+          <div className="w-1/2 pr-2">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="expiryDate">
+              Expiry Date
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="expiryDate"
+              type="text"
+              placeholder="MM/YY"
+              value={expiryDate}
+              onChange={(e) => setExpiryDate(e.target.value)}
+              required
+            />
+          </div>
+          <div className="w-1/2 pl-2">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cvv">
+              CVV
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="cvv"
+              type="text"
+              placeholder="123"
+              value={cvv}
+              onChange={(e) => setCvv(e.target.value)}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="mb-4 md:mb-5 lg:mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cardHolder">
+            Card Holder Name
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="cardHolder"
+            type="text"
+            placeholder="Diva"
+            value={cardHolder}
+            onChange={(e) => setCardHolder(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="flex items-center mb-4">
+          <FaLock className="text-gray-500 mr-2" />
+          <p className="text-sm md:text-base text-gray-600">
+            Your transaction is secured with SSL encryption
+          </p>
+        </div>
+
+        <button
+          className="bg-rose-700 hover:bg-rose-500 text-white font-bold py-2 md:py-2.5 lg:py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline w-full"
+          type="submit"
+        >
+          Pay Now
+        </button>
+      </form>
+    </div>
+  );
+};
+
+const CashOnDeliveryComponent = () => {
+  const navigate = useNavigate();
+  
+  return (
+    <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
+      <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Pay at your Door step </h2>
+      <hr className="mb-4 md:mb-5 lg:mb-6" />
+      <p className='mb-3 md:mb-4 lg:mb-5'><b>25260 users</b> have made payments through UPI in the last 1hr.<b className='text-rose-700'>Switch to upi</b></p>
       <button
         className="bg-rose-700 hover:bg-rose-500 text-white font-bold py-2 md:py-2.5 lg:py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline w-full"
         type="button"
-      >
-        Pay Now
-      </button>
-    </form>
-  </div>
-);
-
-const CashOnDeliveryComponent = () => (
-  <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
-    <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Pay at your Door step </h2>
-    <hr className="mb-4 md:mb-5 lg:mb-6" />
-    <p className='mb-3 md:mb-4 lg:mb-5'><b>25260 users</b> have made payments through UPI in the last 1hr.<b className='text-rose-700'>Switch to upi</b></p>
-    <button
-        className="bg-rose-700 hover:bg-rose-500 text-white font-bold py-2 md:py-2.5 lg:py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline w-full"
-        type="button"
+        onClick={() => navigate('/confirm-order')}
       >
         Place order
-    </button>
-  </div>
-);
+      </button>
+    </div>
+  );
+};
 
 const NetBankingComponent = () => {
+  const navigate = useNavigate();
   const banks = [
     { name: 'Axis Bank', icon: '🏦' },
     { name: 'HDFC Bank', icon: '🏦' },
@@ -179,30 +225,55 @@ const NetBankingComponent = () => {
         ))}
       </div>
 
-      <button className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-500 transition duration-300 font-semibold">
+      <button 
+        className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-500 transition duration-300 font-semibold"
+        onClick={() => navigate('/confirm-order')}
+      >
         Pay Now
       </button>
     </div>
   );
 };
 
-const ShopNowPayLaterComponent = () => (
-  <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
-    <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Pay at your Door step </h2>
-    <hr className="mb-4 md:mb-5 lg:mb-6" />
-    <input
-      className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-      id="cardNumber"
-      type="number"
-      placeholder="Phone number"
-    />
-  </div>
-);
+const ShopNowPayLaterComponent = () => {
+  const navigate = useNavigate();
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/confirm-order');
+  };
+  
+  return (
+    <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
+      <h2 className="text-xl md:text-2xl lg:text-2xl font-bold mb-4">Pay at your Door step </h2>
+      <hr className="mb-4 md:mb-5 lg:mb-6" />
+      <form onSubmit={handleSubmit}>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 md:py-2.5 lg:py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="phoneNumber"
+          type="tel"
+          placeholder="Phone number"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          required
+        />
+        <button
+          className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-500 transition duration-300 mt-4"
+          type="submit"
+        >
+          Continue
+        </button>
+      </form>
+    </div>
+  );
+};
 
 const GiftCardComponent = () => {
   const [giftCardNumber, setGiftCardNumber] = useState('');
   const [pin, setPin] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -210,7 +281,7 @@ const GiftCardComponent = () => {
       setError('PIN is required');
     } else {
       setError('');
-      console.log('Processing payment with gift card:', giftCardNumber, 'and PIN:', pin);
+      navigate('/confirm-order');
     }
   };
 
@@ -267,8 +338,11 @@ const GiftCardComponent = () => {
   )
 };
 
-const OffersComponent = () => (
-  <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
+const OffersComponent = () => {
+  const navigate = useNavigate();
+  
+  return (
+    <div className="bg-white p-4 md:p-5 lg:p-6 rounded-lg shadow-md">
       <h2 className="text-xl md:text-2xl lg:text-2xl font-semibold text-sky-900 mb-4">offers for you</h2>
       <p className='font-semibold'>get upto 15% Cashback on Divueens Cosmetics</p>
       <p>product on minimum transaction RS1199 <b className='text-rose-600'>T&C</b></p>
@@ -276,8 +350,15 @@ const OffersComponent = () => (
       <h2 className="text-xl md:text-2xl lg:text-2xl font-semibold text-sky-900 mb-4">Unavailable offers</h2>
       <p className='font-semibold'>save 20% Extra with HDFC first SWYP credit card</p>
       <p>save 20% Extra with HDFC first SWYP credit card<b className='text-rose-600'>T&C</b></p>
-  </div>
-);
+      <button
+        className="w-full bg-rose-700 text-white py-2 md:py-2.5 lg:py-3 rounded-md hover:bg-rose-500 transition duration-300 mt-4"
+        onClick={() => navigate('/confirm-order')}
+      >
+        Apply Offer and Continue
+      </button>
+    </div>
+  );
+};
 
 export default function Transaction() {
   const [selectedOption, setSelectedOption] = useState('');
