@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef  , useContext} from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import {
   FiMenu,
   FiSearch,
@@ -8,28 +8,29 @@ import {
   FiTrendingUp,
 } from "react-icons/fi";
 import SearchBox from "./SearchBox";
-import { Link , NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Auth from "../../Auth/Auth";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBars } from "react-icons/fa6";
-import { Divueens } from "../../../assets/assets";
+// import { Divueens } from "../../../assets/assets";
 import navItemData from "./NavDropDownItems";
 import SearchBoxMob from "./SearchBoxMob";
-import {CartContext} from '../../../context/CartContext';
+import { CartContext } from "../../../context/CartContext";
+import Divueens from "../../../assets/Divueens3.jpg";
 
 const Navbar1 = ({ navItemText }) => {
-  const {numCartItem} = useContext(CartContext)
+  const { numCartItem } = useContext(CartContext);
   const [openDropdown, setOpenDropdown] = useState(false);
   const [displayAuth, setDisplayAuth] = useState(false);
   const [isDrop, setIsDrop] = useState(false);
   const [displayOnScroll, setDisplayOnScroll] = useState("");
   const mainNavItems = [
-    {"title":"Categories", "url":"/products"},
-    {"title":"Top Brands", "url":"/"},
+    { title: "Categories", url: "/products" },
+    { title: "Top Brands", url: "/top-catagories" },
     // "Div Fashion",
-    {"title":"Beauty Advice", "url":"/virtual-try-on"},
-    {"title":"Tools & Accessories", "url":"/virtual-try-on"},
-    {"title":"Offers", "url":"/special-offers"},
+    { title: "Beauty Trends", url: "/blogs" },
+    { title: "Glow Guide", url: "/virtual-try-on" },
+    { title: "Offers", url: "/special-offers" },
   ];
   const subNavItems = [
     "Face care",
@@ -47,9 +48,7 @@ const Navbar1 = ({ navItemText }) => {
     () =>
       window.addEventListener("scroll", () =>
         setDisplayOnScroll(
-          scrollY >= 50
-            ? "shadow-md border-b border-rose-200 bg-white"
-            : ""
+          scrollY >= 50 ? "shadow-md border-b border-rose-200 bg-white" : ""
         )
       ),
     []
@@ -63,49 +62,56 @@ const Navbar1 = ({ navItemText }) => {
 
   const [hoveredCategory, setHoveredCategory] = useState(null);
 
-
   return (
     <>
       <Auth show={displayAuth} changeView={setDisplayAuth} />
-      <div className={`flex bg-white justify-between font-montserrat sticky pl-4 xl:pl-10 top-0 z-40 w-full ${displayOnScroll}`}>
-        <div className="">
-          <Link to="/">
-            <img
+      <div
+        className={`flex text-center md:py-1 lg:py-3 bg-white lg:justify-center justify-between md:gap-x-5 items-center sticky top-0 z-40 w-full ${displayOnScroll}`}
+      >
+        <div className="w-fit pl-6 md:pl-10 lg:pl-0">
+          {/* <Link to="/"> */}
+          {/* <img
               className="w-full h-[70px] md:h-[90px] lg:h-[100px] py-1 md:py-2"
               src={Divueens}
               alt="Description"
-            />
-          </Link>
+            /> */}
+          <img className="w-[100px] h-[60px] md:w-[120px] md:h-[80px] object-cover" src={Divueens} alt="Description" />
+
+          {/* </Link> */}
         </div>
-        <div className="flex flex-col items-center py-2 justify-between">
-          <div className=" flex flex-row-reverse items-center gap-3 lg:px-8 xl:pr-20">
-            <div className="w-full flex lg:justify-center justify-end items-center ">
-              <div className="w-[70%] mr-6 lg:hidden"><SearchBoxMob /></div>
-              <div className="hidden lg:w-[70%] lg:block">
+        <div className="flex flex-col items-center pl-4">
+          <div className="flex flex-row-reverse items-center w-full">
+            <div className="w-full flex lg:justify-start justify-end items-center">
+              <div className="w-[70%] mr-6 lg:hidden">
+                <SearchBoxMob />
+              </div>
+              <div className="hidden lg:w-full lg:block">
                 <SearchBox />
               </div>
-              
-              <div className="hidden lg:flex space-x-6 text-slate-500">
-                <button className="relative md:pl-7 hover:text-rose-800 px-4">
-                  <NavLink to="/addtocart"> <FiShoppingCart size={30} /> </NavLink>
+
+              <div className="hidden lg:flex space-x-5 ml-4 text-slate-500">
+                <NavLink to="/addtocart">
+                  <FiShoppingCart
+                    size={18}
+                    className="relative hover:text-rose-800"
+                  />
                   {numCartItem > 0 && (
                     <div className="absolute rounded-full top-0 right-0 w-[20px] h-[20px] bg-rose-600 text-white flex items-center justify-center text-xs">
                       {numCartItem}
                     </div>
                   )}
-                </button>
-                <NavLink to='/wishlist'>
-                  <button className="md:hover:text-rose-800">
-                    <FiHeart size={20} />
-                  </button>
+                </NavLink>
+                <NavLink to="/wishlist">
+                    <FiHeart size={18} className="md:hover:text-rose-800" />
                 </NavLink>
                 {/* <NavLink to='/profile'> */}
-                  <button
-                    className="hover:text-rose-800"
-                    onClick={() => setDisplayAuth(true)}
-                  >
-                    <FiUser size={20} />
-                  </button>
+
+                <FiUser
+                  size={18}
+                  className="hover:text-rose-800"
+                  onClick={() => setDisplayAuth(true)}
+                />
+
                 {/* </NavLink> */}
               </div>
 
@@ -115,12 +121,12 @@ const Navbar1 = ({ navItemText }) => {
                 </button>
               </div>
             </div>
-            <div className="hidden lg:flex justify-center gap-x-6 xl:gap-x-8 xl:pr-6 font-semibold text-slate-600 tracking-wider">
+            <div className="hidden lg:flex justify-start gap-x-4 mr-[2%] text-sm font-medium text-black tracking-wide">
               {mainNavItems.map((item, index) => (
                 <Link
                   key={index}
                   to={item.url}
-                  className="text-nowrap hover:text-rose-800"
+                  className="text-nowrap hover:underline-offset-4 hover:underline"
                 >
                   {item.title}
                 </Link>
@@ -149,9 +155,12 @@ const Navbar1 = ({ navItemText }) => {
                   </div>
                   {/* <div className="relative my-4 pr-4"><SearchBox /></div> */}
                   <div className="flex py-1 text-sm flex-col w-full gap-4 overflow-auto max-h-screen scroll-smooth">
-                    <Link to="/"
+                    <Link
+                      to="/"
                       className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
-                    >Home</Link>
+                    >
+                      Home
+                    </Link>
                     {mainNavItems.map((item, index) => (
                       <NavLink
                         to={item.url}
@@ -162,12 +171,18 @@ const Navbar1 = ({ navItemText }) => {
                       </NavLink>
                     ))}
                     {/* -------------------------- Remove line below after this ------------------------------- */}
-                    <Link to="/membership"
+                    <Link
+                      to="/membership"
                       className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
-                    >Membership</Link>
-                    <Link to="/virtual-try-on"
+                    >
+                      Membership
+                    </Link>
+                    <Link
+                      to="/virtual-try-on"
                       className="px-4 py-2 text-gray-800 shadow-md hover:bg-rose-400 hover:text-white rounded-s-full"
-                    >Virtual Try On</Link>
+                    >
+                      Virtual Try On
+                    </Link>
                     {/* <div className="flex text-sm flex-col w-full gap-4 ">
                     {Object.keys(navItemData).map((category, index) => {
                       const categoryData = navItemData[category];
@@ -213,32 +228,12 @@ const Navbar1 = ({ navItemText }) => {
                   </div> */}
                   </div>
                 </div>
-
               </div>
             )}
           </div>
-          <div className="bg-white w-full mx-auto border-t hidden lg:flex">
-            <div className="w-full py-2 px-4 ">
-              <ul className="w-full flex gap-6 justify-end lg:justify-center xl:gap-8 tracking-wide">
-
-                {/* {subNavItems.map((item, index) => (
-                <>
-                  <li className="flex-shrink-0 " key={index}>
-                    <Link
-                      className="hover:underline text-sm font-medium text-slate-500 hover:text-rose-800 relative"
-                      onMouseEnter={() => setIsDrop(true)}
-                      onMouseLeave={() => setIsDrop(false)}
-                    >
-                      {item}
-                      {isDrop && (
-                        <div className="w-[80vw] h-auto p-12 absolute left-[50%] translate-x-[-50%] rounded-b-[20px] top-8 bg-white border shadow-xl font-mono l-[30px] z-30 navItemMultipage">
-                        </div>
-                      )}
-                    </Link>
-                  </li>
-                </>
-              ))} */}
-
+          <div className="w-full mx-auto hidden lg:flex">
+            <div className="w-full pt-3">
+              <ul className="w-full flex gap-4 lg:justify-start tracking-wider">
                 {Object.keys(navItemData).map((category, index) => {
                   const categoryData = navItemData[category];
                   if (!categoryData) return null;
@@ -246,7 +241,7 @@ const Navbar1 = ({ navItemText }) => {
                   return (
                     <li className="flex-shrink-0 " key={index}>
                       <Link
-                        className="text-sm font-medium text-slate-500 hover:text-rose-800 relative"
+                        className="text-xs text-slate-800 hover:text-rose-800 relative"
                         onMouseEnter={() => {
                           setIsDrop(true);
                           setHoveredCategory(category);
@@ -258,23 +253,38 @@ const Navbar1 = ({ navItemText }) => {
                       >
                         {category}
                         {isDrop && hoveredCategory === category && (
-                          <div onMouseEnter={() => {
-                            setIsDrop(true);
-                            setHoveredCategory(category);
-                          }} className={"w-[30rem] h-auto px-8 py-4 -left-8 absolute rounded-b-[20px] top-4 bg-white shadow-xl l-[30px] z-30 navItemMultipage grid grid-cols-3 gap-5"}>
+                          <div
+                            onMouseEnter={() => {
+                              setIsDrop(true);
+                              setHoveredCategory(category);
+                            }}
+                            className={
+                              "w-[30rem] h-auto px-8 py-4 -left-8 absolute rounded-b-[20px] top-4 bg-white shadow-xl l-[30px] z-30 navItemMultipage grid grid-cols-3 gap-5"
+                            }
+                          >
                             {categoryData.map((subcategory) => {
-                              const subcategoryLabel = Object.keys(subcategory)[0];
-                              const subcategoryItems = subcategory[subcategoryLabel];
+                              const subcategoryLabel =
+                                Object.keys(subcategory)[0];
+                              const subcategoryItems =
+                                subcategory[subcategoryLabel];
                               if (!subcategoryItems) return null;
                               console.log(categoryData);
 
                               return (
                                 <div className="w-full" key={subcategoryLabel}>
-                                  <h3 className="text-black font-semibold text-sm leading-tight py-2 tracking-tight">{subcategoryLabel}</h3>
+                                  <h3 className="text-black font-semibold text-sm leading-tight py-2 tracking-tight">
+                                    {subcategoryLabel}
+                                  </h3>
                                   <ul>
                                     {subcategoryItems.map((item) => (
                                       // <li className="text-slate-500 text-[0.8rem] hover:text-rose-800" key={item}>{item}</li>
-                                      <Link to={`${category}/${item}`} className="text-slate-500 block text-[0.8rem] hover:text-rose-800" key={item}>{item}</Link>
+                                      <Link
+                                        to={`${category}/${item}`}
+                                        className="text-slate-500 block text-[0.8rem] hover:text-rose-800"
+                                        key={item}
+                                      >
+                                        {item}
+                                      </Link>
                                     ))}
                                   </ul>
                                 </div>
@@ -294,7 +304,6 @@ const Navbar1 = ({ navItemText }) => {
               <Link to="/virtual-try-on"
                 className="hover:underline text-sm font-medium flex items-center justify-between px-2 text-slate-500 hover:text-rose-800 relative"
               >Virtual TryOn</Link> */}
-
               </ul>
             </div>
           </div>

@@ -1,9 +1,11 @@
+import img1 from "../../../assets/myOrders/img1.png"
+
 const orderData3 = [
   {
     status: 'Delivered',
     date: '10th July,2024',
     datetitle: 'Delievery Date:',
-    imageUrl: './src/assets/myOrders/img1.png',
+    imageUrl: img1,
     orderId: '45678910',
     description: 'Rosy Lip gloss | Shade: Angel | 3.9 ml ',
     rating: 5,

@@ -38,7 +38,9 @@ const AnswerModal = () => {
     <>
       <div className="container mx-auto">
         <button
-          className="text-nowrap text-lg bg-transparent mx-auto shadow-md hover:shadow-inner px-4 rounded font-medium hover:bg-pink-300 text-black py-2 mt-8"
+
+          className="text-nowrap bg-rose-700 hover:bg-rose-900 text-white text-lg mx-auto shadow-md hover:shadow-inner px-4 rounded font-medium  py-2 mt-8"
+
           ref={trigger}
           onClick={() => setModalOpen(true)}
         >
@@ -55,7 +57,7 @@ const AnswerModal = () => {
             onBlur={() => setModalOpen(false)}
             className="w-full relative max-w-[570px] rounded-[20px] bg-white px-8 py-12 text-center dark:bg-dark-2 md:px-[70px] shadow-md md:py-[60px]"
           >
-            <h3 className="pb-[18px] text-xl font-semibold text-black sm:text-2xl">
+            <h3 className="pb-[18px] text-xl text-rose-700 font-semibold sm:text-2xl">
               Write an Answer
             </h3>
             <textarea placeholder="Write an Answer..." className="w-full text-black py-6 px-4 bg-slate-100 h-40 mb-8 rounded-md text-xl"/>
@@ -70,8 +72,8 @@ const AnswerModal = () => {
                 </button>
               </div>
               <div className="w-3/4 px-3">
-                <button className=" flex flex-nowrap justify-center items-center gap-2 w-full rounded-md border border-green-500 bg-primary p-3 text-center text-nowrap font-medium text-black transition 
-            hover:bg-green-600 hover:text-white
+                <button className=" flex flex-nowrap justify-center items-center gap-2 w-full rounded-md border border-rose-500 bg-primary p-3 text-center text-nowrap font-medium text-rose-700 transition 
+            hover:bg-rose-600 hover:text-white
                 ">
                   <a href={`/#`} className="text-nowrap text-lg"> Send For Review  </a>
                   <BsSendCheckFill className="text-lg" />

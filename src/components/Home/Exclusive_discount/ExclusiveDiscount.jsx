@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Banner,
   bestsellers_1,
   example,
   freebies,

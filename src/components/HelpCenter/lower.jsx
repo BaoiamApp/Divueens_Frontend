@@ -68,6 +68,16 @@ export default function Lower() {
   className="w-60 sm:w-80 h-[45px] outline-none rounded-3xl text-center"
   placeholder="Enter your email"/>
           <button onClick={handleClick} className="bg-rose-600 text-xs text-white px-4 py-2 rounded hover:bg-rose-700">Summit</button>
+
+
+          <input 
+            type="text" 
+            className="w-full px-4 text-[0.8rem]" 
+            placeholder="Ask Your Question" 
+            value={inputField} 
+            onChange={handleInputChange} 
+          />
+          <button onClick={handleClick} className="bg-rose-700 text-xs text-white px-4 py-2 rounded-lg hover:bg-rose-600">Subscribe</button>
         </div>
       </div>
       <div className="w-full grid grid-cols-2 gap-4 md:w-1/2 xl:flex xl:items-center xl:justify-between xl:flex-row">

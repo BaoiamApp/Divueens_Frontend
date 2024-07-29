@@ -5,6 +5,7 @@ import productData from '../productData'
 import QuantitySelector from '../QuantitySelector';
 import SizeSelector from '../SizeSelector';
 import RelatedProducts from '../RelatedProducts';
+import StarRating from '../StarRating'
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -33,9 +34,9 @@ const ProductDetails = () => {
         setQuantity(newQuantity);
     };
 
-    const handleThumbnailChange = (product) => {
-        setSelectedProduct(product);
-    };
+    // const handleThumbnailChange = (product) => {
+    //     setSelectedProduct(product);
+    // };
 
     const [activeTab, setActiveTab] = useState('description');
     const [view, changeview] = useState(false);
@@ -58,7 +59,7 @@ const ProductDetails = () => {
         );
     };
 
-    console.log(selectedProduct);
+    // console.log(selectedProduct);
 
     return (
         <div>
@@ -75,7 +76,7 @@ const ProductDetails = () => {
                                 />
                             </div>
                             <div className="flex justify-center gap-2 w-full items-center mb-4">
-                                {productData.map((product) => (
+                                {/* {productData.map((product) => (
                                     <img
                                         key={product.id}
                                         src={product.src}
@@ -83,7 +84,14 @@ const ProductDetails = () => {
                                         className={`sm:w-[114px] w-[70px] cursor-pointer hover:border-rose-500 border-2 ${selectedProduct.src === product.src ? 'border-rose-500' : 'border-gray-300'}`}
                                         onClick={() => handleThumbnailChange(product)}
                                     />
-                                ))}
+                                ))} */}
+                                <img
+                                    key={productDetail.id}
+                                    src={productDetail.image}
+                                    alt={productDetail.alt}
+                                    className={`sm:w-[114px] w-[70px] cursor-pointer hover:border-rose-500 border-2 $`}
+
+                                />
                             </div>
                         </div>
                         {/* Product Details */}
@@ -95,23 +103,24 @@ const ProductDetails = () => {
                             </div>
                             <h2 className="text-2xl font-semibold my-1">{productDetail.name}</h2>
                             <div className="flex ml-[90px] 1xs:ml-[110px] xs:ml-[140px] sm:ml-0">
-                                {/* <StarRating rating={4} /> */}
+                                <StarRating rating={productDetail.rating} />
                             </div>
-                            <ul className="list-disc list-inside mt-4 text-left text-sm">
+                            <ul className="list-disc list-inside text-left text-sm">
                                 {selectedProduct.details.map((detail, index) => (
                                     <li key={index}>{detail}</li>
                                 ))}
                             </ul>
                             <SizeSelector selectedSize={selectedSize} onSizeChange={handleSizeChange} />
                             <div className="flex flex-col-reverse mt-4 text-red-500 ">
-                                <p className='text-base text-slate-500'><del> ${selectedProduct.originalPrice.toFixed(2)}</del></p>
-                                {/* <p className="font-semibold text-xl">${selectedProduct.discountedPrice.toFixed(2)}</p> */}
-                                <p className="font-semibold text-xl">${productDetail.price}</p>
+                                <p className='text-base text-slate-500'><del> ${productDetail.price}</del></p>
+    
+                                {/* Added a value to the price to show the discount / offer */}
+                                <p className="font-semibold text-xl">${productDetail.price - 50}</p>
                             </div>
                             <div className="flex flex-col items-center lg:items-start justify-start gap-4 mt-4">
                                 <QuantitySelector quantity={quantity} onQuantityChange={handleQuantityChange} />
                                 <div className='flex gap-x-5 lg:text-lg'>
-                                    <Link to={`/order-now/${productDetail.id}`}className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl">
+                                    <Link to={`/order-now/${productDetail.id}`} className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl">
                                         Buy Now
                                     </Link>
                                     <button className="bg-rose-700 text-white px-5 py-2 hover:bg-rose-500 rounded-xl flex-shrink-0">

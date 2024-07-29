@@ -79,19 +79,19 @@ const CompanyOverviewAndMore = () => {
     return (
         <div className='my-10 w-full'>
             {/* Company Overview */}
-            <div className="w-full flex flex-col-reverse md:flex-row md:justify-between gap-4 md:p-10">
-                <div className="md:w-1/2 w-full flex flex-col gap-5 justify-center p-4">
-                    <p className='font-semibold md:text-3xl text-2xl text-center'>{companyData.title}</p>
-                    <p className='font-medium text-xl md:leading-9'>{companyData.description}</p>
+            <div className="w-full flex flex-col-reverse md:flex-row md:justify-between gap-4 md:p-10 shadow-md">
+                <div className="md:w-1/2 w-full flex flex-col gap-5 justify-center py-4 px-8">
+                    <p className='font-semibold md:text-3xl text-rose-900 text-2xl text-center'>{companyData.title}</p>
+                    <p className='font-medium text-lg text-justify md:leading-9'>{companyData.description}</p>
                 </div>
-                <img src={companyData.img} className='md:w-1/2'/>
+                <img src={companyData.img} className='md:w-1/2 rounded-md'/>
             </div>
             {/* Our Partnership */}
-            <div className="w-full my-20 bg-black p-10 flex-col flex gap-10">
+            <div className="w-full my-20 bg-rose-900 p-10 flex-col flex gap-10">
                 <p className='font-semibold text-white text-4xl text-center'>Our Partnerships</p>
                 <div className='grid md:grid-cols-4 md:grid-rows-1 grid-cols-2 grid-rows-2 md:gap-x-24 gap-x-14 gap-y-5 place-content-center mx-auto'>
                     {partnersData.map((data) => (
-                        <img src={data.image} alt={data.title} key={data.id} className='w-[160px] rounded-[50%]' />
+                        <img src={data.image} alt={data.title} key={data.id} className='w-20 hover:shadow-2xl transform ease-in duration-300 shadow-white rounded-[50%]' />
                     ))}
                 </div>
             </div>
@@ -99,7 +99,7 @@ const CompanyOverviewAndMore = () => {
             <div className="w-[95%] flex flex-col mx-auto shadow-2xl gap-7 justify-center items-center">
                 <div className='flex flex-col gap-8 text-center p-10'>
                     <p className='text-2xl font-semibold md:text-3xl'>Our Core Values</p>
-                    <p className='text-xl font-medium w-[80%] mx-auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non perferendis esse amet accusantium officia autem consectetur accusamus incidunt fugit veritatis!</p>
+                    <p className='text-xl text-justify font-medium w-[80%] mx-auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non perferendis esse amet accusantium officia autem consectetur accusamus incidunt fugit veritatis!</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-10 w-full ">
                     {ourCoreData.map((data) => (

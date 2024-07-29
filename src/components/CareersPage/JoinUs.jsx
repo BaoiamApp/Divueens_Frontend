@@ -12,7 +12,9 @@ function JoinUs() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
             quod!
           </p>
-          <button className="capitalize text-nowrap py-2 text-center px-4 bg-black text-white font-semibold rounded-3xl text-sm cursor-pointer h-fit w-fit flex items-center mt-4 gap-2">
+
+          <button className="capitalize text-nowrap py-2 text-center px-4  bg-rose-700 hover:bg-rose-900  text-white font-semibold rounded-3xl text-base cursor-pointer h-fit w-fit flex items-center mt-4 gap-2">
+
             explore now <MdArrowOutward className="font-bold text-lg" />
           </button>
         </div>

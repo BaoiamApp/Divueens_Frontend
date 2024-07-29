@@ -50,7 +50,7 @@ function WeAreHiring() {
         <div className="text-sm border-slate-900 border  font-semibold rounded-2xl py-1 px-4">
           We're hiring!
         </div>
-        <h1 className="text-2xl text-center font-semibold ">We Have 12 Job Openings</h1>
+        <h1 className="text-2xl text-center text-red-700 font-semibold ">We Have 12 Job Openings</h1>
         <p className="font-semibold text-center w-3/4">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum libero
           earum autem aliquid reprehenderit aperiam iste aspernatur cumquemap
@@ -76,7 +76,9 @@ function WeAreHiring() {
                 return (
                   <button
                     key={index}
-                    className="capitalize text-nowrap py-1 px-4 hover:bg-black hover:text-white focus:bg-black focus:text-white font-semibold rounded-3xl text-black text-lg cursor-pointer "
+
+                    className="capitalize text-nowrap py-1 px-4 hover:bg-rose-700  hover:text-white focus:bg-rose-700 focus:text-white font-semibold rounded-3xl text-black text-lg cursor-pointer "
+
                   >
                     {catagory}
                   </button>
@@ -107,7 +109,7 @@ function WeAreHiring() {
                 return (
                   <h2
                     key={indx}
-                    className="capitalize text-nowrap py-1 px-3 hover:bg-black hover:text-white focus:bg-black focus:text-white font-semibold rounded-3xl cursor-pointer "
+                    className="capitalize text-nowrap py-1 px-3  hover:bg-rose-900  hover:text-white focus:bg-rose-900 focus:text-white font-semibold rounded-3xl cursor-pointer "
                   >
                     {catagory}
                   </h2>
@@ -143,7 +145,9 @@ function WeAreHiring() {
                     </h1>
                     <p className="text-base mt-2">{item.description}</p>
                   </div>
-                  <button className="capitalize text-nowrap py-2 text-center px-4 bg-black text-white font-semibold rounded-3xl text-sm cursor-pointer h-fit flex items-center mt-4 gap-2">
+
+                  <button className="capitalize text-nowrap py-2 text-center px-4 bg-rose-700 hover:bg-rose-900 text-white font-semibold rounded-3xl text-sm cursor-pointer h-fit flex items-center mt-4 gap-2">
+
                     Apply Now <MdArrowOutward className="font-bold text-lg" />
                   </button>
                 </div>
@@ -166,7 +170,7 @@ function WeAreHiring() {
                       return (
                         <div
                           key={ind}
-                          className="text-black flex items-center gap-2 text-sm md:text-base font-semibold py-1 px-2 capitalize cursor-pointer shadow-md rounded-2xl my-4"
+                          className="text-rose-900 flex items-center gap-2 text-sm md:text-base font-semibold py-1 px-2 capitalize cursor-pointer shadow-md rounded-2xl my-4 hover:shadow-inner" 
                         >
                           <div className="text-lg">{item.icon}</div>
                           <div className="text-nowrap">{item.text}</div>

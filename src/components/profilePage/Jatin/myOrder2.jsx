@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import orderData from "./orderData2";
-
+import rightarrow from "../../../assets/myOrders/right-arrow.png"
+import Delete from "../../../assets/myOrders/bin.png"
 export default function MyOrder2() {
   const [activeButton, setActiveButton] = useState("All");
   const [filteredOrders, setFilteredOrders] = useState(orderData);
@@ -67,7 +68,7 @@ export default function MyOrder2() {
           >
             <img
               className="absolute top-2 right-4 w-[20px] h-[20px] cursor-pointer"
-              src="/src/assets/myOrders/bin.png"
+              src={Delete}
               alt="Bin Icon"
             />
             <div className="flex flex-col sm:flex-row items-center">
@@ -115,7 +116,7 @@ export default function MyOrder2() {
             </div>
             <img
               className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 cursor-pointer"
-              src="/src/assets/myOrders/right-arrow.png"
+              src={rightarrow}
               alt="Right Arrow Icon"
             />
           </div>

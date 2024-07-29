@@ -112,18 +112,33 @@ export { default as Pic57 } from "./pic57.png";
 export { default as Pic58 } from "./pic58.png";
 export { default as Pic59 } from "./pic59.png";
 export { default as Pic60 } from "./pic60.png";
-export {default as brand_2} from "./brand-2.jpeg";
-export {default as brand_3} from "./brand-3.png";
-export {default as product_1} from "./product-1.jpg";
-export {default as product_2} from "./product-2.jpeg";
-export {default as product_3} from "./product-3.jpeg";
-export {default as product_4} from "./product-4.jpg";
-export {default as product_5} from "./product-5.jpeg";
-export {default as product_6} from "./product-6.jpeg";
-export {default as Amazon } from "./CareersPage/amazon.svg";
-export {default as Flipkart } from "./CareersPage/flipkart.svg";
-export {default as PhonePe } from "./CareersPage/phonepe.svg";
-export {default as SnapInc } from "./CareersPage/snapinc.svg";
+export { default as brand_2 } from "./brand-2.jpeg";
+export { default as brand_3 } from "./brand-3.png";
+export { default as product_1 } from "./product-1.jpg";
+export { default as product_2 } from "./product-2.jpeg";
+export { default as product_3 } from "./product-3.jpeg";
+export { default as product_4 } from "./product-4.jpg";
+export { default as product_5 } from "./product-5.jpeg";
+export { default as product_6 } from "./product-6.jpeg";
+export { default as Amazon } from "./CareersPage/amazon.svg";
+export { default as Flipkart } from "./CareersPage/flipkart.svg";
+export { default as PhonePe } from "./CareersPage/phonepe.svg";
+export { default as SnapInc } from "./CareersPage/snapinc.svg";
+
+// Banner Grid
+export { default as Banner } from "./Banner/banner.webp";
+export { default as Banner1 } from "./Banner/banner1.webp";
+export { default as Banner2 } from "./Banner/banner2.webp";
+export { default as Banner3 } from "./Banner/banner3.webp";
+export { default as Banner4 } from "./Banner/banner4.webp";
+export { default as Banner5 } from "./Banner/banner5.webp";
+export { default as Banner6 } from "./Banner/banner6.webp";
+export { default as Banner7 } from "./Banner/banner7.webp";
+export { default as Banner8 } from "./Banner/banner8.webp";
+export { default as Banner9 } from "./Banner/banner9.webp";
+export { default as Banner10 } from "./Banner/banner10.webp";
+export { default as Banner11 } from "./Banner/banner11.webp";
+export { default as Banner12 } from "./Banner/banner12.webp";
 
 export const imageUrls = [
   {

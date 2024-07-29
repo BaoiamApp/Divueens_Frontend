@@ -34,7 +34,7 @@ function StoreLocator() {
         />
         <button
           id="searchButton"
-          className="bg-white text-pink-500 border border-pink-600 py-2 px-4 rounded-[20px] hover:bg-[#FF5BB1] hover:text-white transition duration-300"
+          className="bg-white text-rose-700 border border-rose-700 py-2 px-4 rounded-[20px] hover:bg-rose-600 hover:text-white transition duration-300"
         >
           Search
         </button>

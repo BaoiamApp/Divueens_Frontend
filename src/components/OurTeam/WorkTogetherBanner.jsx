@@ -13,7 +13,7 @@ const WorkTogetherBanner = () => {
         <h2 className="text-3xl font-bold text-white">Let's Work Together</h2>
         <p className="mt-4 text-rose-200">Join our amazing team and be a part of something great.</p>
         <div className="mt-6 flex justify-center">
-        <Link to={"/maintennace"} className="py-2 px-4 bg-rose-600 text-white font-semibold rounded-lg shadow-md hover:bg-white hover:text-rose-600 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-75">
+        <Link to={"/maintennace"} className="py-2 px-4 bg-rose-700 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-75">
             Join Now
           </Link>
         </div>

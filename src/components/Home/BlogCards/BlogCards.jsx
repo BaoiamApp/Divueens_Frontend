@@ -50,7 +50,7 @@ const BlogCards = () => {
                 })}
             </div>
             <div className='text-center mx-auto w-full mt-8'>
-                <Link to={'/blogs'} className='px-4 py-2 text-white bg-rose-700 rounded-full w-fit border hover:border hover:border-rose-700 hover:text-rose-700 hover:bg-white'>View More</Link>
+                <Link to={'/blogs'} className='px-4 py-2 text-white bg-rose-700 rounded-lg w-fit border hover:border hover:border-rose-700 hover:bg-rose-600'>View More</Link>
             </div>
         </>
     )

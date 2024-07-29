@@ -9,7 +9,7 @@ const ReachOut = () => {
         <div className="flex rounded-md items-center p-2 pl-2 pr-4 bg-white justify-center gap-4 mb-6 shadow-lg">
 
           <input type="text" className="w-full px-4 text-[0.8rem]" placeholder="Ask Your Question" />
-          <button className="bg-orange-500 text-xs text-white px-4 py-2 rounded hover:bg-orange-600">Subscribe</button>
+          <button className="bg-rose-700 text-xs text-white px-4 py-2 rounded-lg hover:bg-rose-600">Subscribe</button>
 
         </div>
       </div>

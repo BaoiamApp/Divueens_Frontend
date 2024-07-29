@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./TopBrands.module.css";
-import { brands } from "../../../assets/assets";
+import { Banner, brands } from "../../../assets/assets";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -76,6 +76,9 @@ const TopBrands = () => {
             </h2>
           </div>
         </Link>
+        <br />
+
+        <img src={Banner} className="w-full" alt="banner" />
       </div>
     </>
   );

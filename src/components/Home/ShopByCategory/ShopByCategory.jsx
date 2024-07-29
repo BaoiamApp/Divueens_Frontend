@@ -30,10 +30,10 @@ const ShopByCategory = () => {
         >
 
           <div className=" w-full h-full">
-            <div className="categories-container grid mx-auto justify-center items-center w-full px-8 lg:w-[85%] xl:w-[65%] h-full grid-cols-2 grid-rows-3 md:grid-rows-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 md:h-[80%] box-border place-content-center z-[2]">
+            <div className="categories-container grid mx-auto justify-center items-center w-full px-8 md:px-0 lg:w-[85%] xl:w-[65%] h-full grid-cols-2 grid-rows-3 md:grid-rows-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 md:h-[80%] box-border place-content-center z-[2]">
               <div
                 style={{ backgroundImage: `url(${Eyes})` }}
-                className="categories-item mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline eyes"
+                className="categories-item shadow-md mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline eyes"
               >
                 <a href="https://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
@@ -45,7 +45,7 @@ const ShopByCategory = () => {
                 style={{
                   backgroundImage: `url(${Face})`,
                 }}
-                className="categories-item  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline face"
+                className="categories-item shadow-md  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline face"
               >
                 <a href="http://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
@@ -57,7 +57,7 @@ const ShopByCategory = () => {
                 style={{
                   backgroundImage: `url(${Lips})`,
                 }}
-                className="categories-item  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline lips"
+                className="categories-item shadow-md  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline lips"
               >
                 <a href="http://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
@@ -69,7 +69,7 @@ const ShopByCategory = () => {
                 style={{
                   backgroundImage: `url(${SkinCare})`,
                 }}
-                className="categories-item  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline skincare"
+                className="categories-item shadow-md  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline skincare"
               >
                 <a href="http://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
@@ -81,7 +81,7 @@ const ShopByCategory = () => {
                 style={{
                   backgroundImage: `url(${Nails})`,
                 }}
-                className="categories-item  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline nails"
+                className="categories-item shadow-md  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline nails"
               >
                 <a href="http://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
@@ -93,7 +93,7 @@ const ShopByCategory = () => {
                 style={{
                   backgroundImage: `url(${Perfume})`,
                 }}
-                className="categories-item  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline nails"
+                className="categories-item shadow-md  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline nails"
               >
                 <a href="http://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
@@ -105,7 +105,7 @@ const ShopByCategory = () => {
                 style={{
                   backgroundImage: `url(${Hair})`,
                 }}
-                className="categories-item  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline nails"
+                className="categories-item shadow-md  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline nails"
               >
                 <a href="http://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">
@@ -117,7 +117,7 @@ const ShopByCategory = () => {
                 style={{
                   backgroundImage: `url(${Brush})`,
                 }}
-                className="categories-item  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline brush"
+                className="categories-item shadow-md  mx-auto h-[110px] max-[320]:w-[130px] md:h-[180px] md:w-[200px] rounded-[5px] text-[1rem] md:text-[1.5em] box-border bg-center bg-cover relative overflow-hidden cursor-pointer no-underline brush"
               >
                 <a href="http://">
                   <div className="label bg-rose-700/40 w-full h-full max-h-[20px] md:max-h-[30px] text-center text-rose-50 backdrop-blur-sm text-xs md:text-base font-semibold absolute bottom-0 transition-[max-height_.3s_ease] overflow-hidden cursor-pointer no-underline">

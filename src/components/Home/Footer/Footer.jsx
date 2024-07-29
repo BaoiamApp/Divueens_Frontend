@@ -9,9 +9,11 @@ import {
   FaChevronUp,
   FaChevronDown,
 } from "react-icons/fa6";
-import { Divueens } from "../../../assets/assets";
+import { FaFacebook } from "react-icons/fa";
+// import { Divueens } from "../../../assets/assets";
 import { FaLinkedin } from "react-icons/fa";
-
+import Divueens from "../../../assets/Divueens3.jpg";
+import bg from "../../../assets/Shop_By_Category/background.svg";
 const baadiList = [
   {
     title: "About us",
@@ -25,10 +27,10 @@ const baadiList = [
           url: "/our-team",
           txt: "Our Team",
         },
-        {
-          url: "",
-          txt: "Press",
-        },
+        // {
+        //   url: "",
+        //   txt: "Press",
+        // },
         {
           url: "/authenticity",
           txt: "Authenticity",
@@ -37,10 +39,10 @@ const baadiList = [
           url: "/careers",
           txt: "Careers",
         },
-        {
-          url: "/CSR",
-          txt: "Divueens CSR",
-        },
+        // {
+        //   url: "/CSR",
+        //   txt: "Divueens CSR",
+        // },
         {
           url: "/investor-relation",
           txt: "Investor Relation",
@@ -51,46 +53,46 @@ const baadiList = [
   {
     title: "Help",
     chhotiList: [
-      {
-        url: "/contact-us",
-        txt: "Contact Us",
-      },
-      {
-        url: "/help-center",
-        txt: "FAQs",
-      },
-      {
-        url: "/return-policy",
-        txt: "Cancellation and Return",
-      },
-      {
-        url: "/shippingdelivery",
-        txt: "Shipping and Delivery ",
-      },
-      {
-        url: "/privacy-policy",
-        txt: "Privacy Policy",
-      },
-      {
-        url: "/sell-on-divueens",
-        txt: "Sell on Divueens",
-      },
-      {
-        url: "/store-locator",
-        txt: "Store Locator",
-      },
-    ],
+      // {
+        //   url: "/privacy-policy",
+        //   txt: "Privacy Policy",
+        // },
+        {
+          url: "/contact-us",
+          txt: "Contact Us",
+        },
+        {
+          url: "/sell-on-divueens",
+          txt: "Sell on Divueens",
+        },
+        {
+          url: "/help-center",
+          txt: "FAQs",
+        },
+        {
+          url: "/return-policy",
+          txt: "Cancellation & Returns",
+        },
+        {
+          url: "/shippingdelivery",
+          txt: "Shipping & Delivery",
+        },
+        {
+          url: "/store-locator",
+          txt: "Store Locator",
+        },
+      ],
   },
   {
     title: "Inspire Us",
     chhotiList: [
       {
         url: "/blogs",
-        txt: "Beauty Books",
+        txt: "Cosmetic Chronicles",
       },
       {
         url: "/divueens-network",
-        txt: "Divueens Network",
+        txt: "Network O' Divueens",
       },
       {
         url: "/virtual-try-on",
@@ -105,14 +107,14 @@ const baadiList = [
         url: "/special-offers",
         txt: "Special Offers",
       },
-      {
-        url: "/trendings",
-        txt: "Trendings",
-      },
-      {
-        url: "",
-        txt: "New Launches",
-      },
+      // {
+      //   url: "/trendings",
+      //   txt: "Trendings",
+      // },
+      // {
+      //   url: "",
+      //   txt: "New Launches",
+      // },
       {
         url: "/membership",
         txt: "Membership",
@@ -195,7 +197,7 @@ function Footer() {
   }, [toggleView]);
 
   return (
-    <footer data-footer-part="" >
+    <footer data-footer-part="" style={{backgroundImage: `url(${bg})`}} >
       <div className="md:pt-16 pt-1 ">
         <div
           className="row_ md:mt-8 px-10 grid md:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:gap-x-12 sm:gap-y-8"
@@ -233,28 +235,28 @@ function Footer() {
               <a href="/"
                 className={textStyle}
               >
-                <FaFacebookF className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaFacebook className="md:h-5  md:w-5 text-blue-500 hover:text-rose-700" />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/divueens/"
                  className={textStyle}
               >
-                <FaInstagram className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaInstagram className="md:h-5 md:w-5 text-pink-500 hover:text-current" />
               </a>
             </li>
             <li>
               <a href="/"
                  className={textStyle}
               >
-                <FaWhatsapp className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaWhatsapp className="md:h-5 md:w-5 text-green-500 hover:text-current" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/company/divueens/about/"
                 className={textStyle}
               >
-                <FaLinkedin className="md:h-5 md:w-5 text-black hover:text-white" />
+                <FaLinkedin className="md:h-5 md:w-5 text-blue-600 hover:text-current" />
               </a>
             </li>
           </ul>

@@ -90,31 +90,31 @@ const SearchBox = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-md mx-auto lg:float-right">
+    <div className="relative w-full">
       <input
         type="text"
         value={searchTerm}
         onChange={handleChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        placeholder="Search . . ."
-        className="w-full text-sm pl-4 pr-20 py-2 border border-gray-300 rounded-lg focus:outline focus:outline-rose-800"
+        placeholder="Search..."
+        className="text-xs px-3 py-2 w-full shadow-sm shadow-slate-400 rounded-full focus:outline focus:outline-rose-800"
       />
-      <FiSearch className="absolute top-3 right-3 text-gray-400" />
+      <FiSearch className="absolute top-2 right-3 text-slate-400" />
       {
         showDropdown
         && (
           <div
             ref={dropdownRef}
-            className="absolute w-full mt-0.5 bg-white border rounded-lg shadow-lg z-10"
+            className="absolute w-[17rem] mt-0.5 bg-white border rounded-lg shadow-lg z-10"
           >
-            <div className="py-4 px-6 text-sm ">
+            <div className="py-4 px-2 text-sm ">
 
               <h3 className="font-semibold mb-2 flex items-center text-gray-800 text-left">
                 <FiTrendingUp size={16} className="mr-2" />
                 Trending Searches
               </h3>
-              <div className="grid grid-cols-4 text-gray-600 text-left ">
+              <div className="grid grid-cols-2 text-gray-600 text-left ">
                 {searchTerm === "" &&
                   defaultRecommendations.map((recommendation, index) => (
                     <p
@@ -137,7 +137,7 @@ const SearchBox = () => {
               <h3 className="text-sm font-medium mb-2 text-left">
                 Popular Products
               </h3>
-              <div className="grid grid-cols-4">
+              <div className="grid grid-cols-3">
                 {searchTerm === "" &&
                   popularProducts.map((product, index) => (
                     <div

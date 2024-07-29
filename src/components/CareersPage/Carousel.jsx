@@ -61,7 +61,7 @@ const Carousel = () => {
         return (
 <button
         onClick={btn.onClick}
-        className="top-1/2 shadow-xl rounded-full p-2" 
+        className="top-1/2 text-rose-700 hover:text-rose-900 shadow-xl rounded-full p-2" 
       >
         {btn.icon}
       </button>

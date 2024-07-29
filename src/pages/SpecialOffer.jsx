@@ -120,7 +120,7 @@ export default function Offer(){
     
       <div className="title font-bold mt-[15px] text-sm text-center xl:mt-12 lg:relative xl:w-21 md:w-[100px] md:h-[17px] xxl:relative xxl:left-[180%] xl:h-15 lg:left-[180%] lg:mb-4 lg:h-[25px] xl:mb-[30px] lg:w-[150px]  sm:mb-1 sm:relative sm:mt-[5px] xl:relative xl:left-[180%] md:relative md:left-[180%] sm:left-[180%] sm:h-[17px]  sm:w-[100px] ml-[6%]">
       <Link to={"/maintennace"}
-      className="bg-rose-600 text-white text-sm py-2  xl:text-xl  md:mb-5 md:text-sm px-3 sm:hover:py-2 sm:py-2 sm:px-3 sm:text-xs hover:bg-white hover:text-rose-600 hover:border-[2px] hover:border-rose-600 rounded-lg hover:py-[15px]"    >
+      className="bg-rose-700 text-white text-sm py-2  xl:text-xl  md:mb-5 md:text-sm px-3 sm:hover:py-2 sm:py-2 sm:px-3 sm:text-xs hover:bg-rose-600  hover:text-white hover:border-[2px] rounded-lg hover:py-[15px]"    >
       Explore
     </Link>
     </div>
@@ -173,7 +173,7 @@ export default function Offer(){
 
     <div className="title font-bold mt-[15px] text-sm text-center xl:mt-12 lg:relative xl:w-21 md:w-[100px] md:h-[17px] xxl:relative xxl:left-[180%] xl:h-15 lg:left-[180%] lg:mb-4 lg:h-[25px] lg:w-[150px]  sm:mb-1 sm:relative sm:mt-[5px] xl:relative xl:left-[180%] md:relative md:left-[180%] sm:left-[180%] sm:h-[17px]  sm:w-[100px] ml-[6%]">
     <Link to={"/maintennace"}
-      className="bg-rose-600 text-white text-sm py-2  xl:text-xl  md:mb-5 md:text-sm px-3 sm:hover:py-2 sm:py-2 sm:px-3 sm:text-xs hover:bg-white hover:text-rose-600 hover:border-[2px] hover:border-rose-600 rounded-lg hover:py-[15px]"    >
+      className="bg-rose-700 text-white text-sm py-2  xl:text-xl  md:mb-5 md:text-sm px-3 sm:hover:py-2 sm:py-2 sm:px-3 sm:text-xs hover:text-white hover:border-[2px] hover:bg-rose-600 rounded-lg hover:py-[15px]"    >
       Explore
     </Link>
     </div>

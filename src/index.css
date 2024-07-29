@@ -175,10 +175,11 @@ footer[data-footer-part] {
   /* border-top-left-radius: 50px; */
   /* border-top-right-radius: 50px; */
   font-family: "Josefin Sans";
-  /* background: linear-gradient(to bottom, #ffe4e6, #9f1239); */
+  /* background: linear-gradient(to bottom, #ffffff 40%, #f43f5e); */
   /* background: #ffe4e6; */
-  background: rgb(220, 217, 217)
-  /*   background:radial-gradient(#f1f1f1, #a4a4a4) */
+  /* background: rgb(220, 217, 217) */
+  /* background: white; */
+    /* background:radial-gradient(#f1f1f1, #a4a4a4) */
 }
 
 /* .col_[data-footer-part]>ul>li>.footerList {

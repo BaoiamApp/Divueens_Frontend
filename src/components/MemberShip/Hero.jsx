@@ -64,7 +64,7 @@ const Hero = () => {
                     <div className="relative z-10 p-8 md:w-3/5 xl:h-80 bg-white opacity-80 ">
                         <h1 className="md:text-4xl text-xl font-bold text-black mb-6 mr-6">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor</h1>
                         <p className="mt-4 text-black mr-6 mb-6">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor</p>
-                        <Link to={"/maintennace"} className="bg-black text-white font-bold py-2 px-10 rounded-full shadow-lg hover:bg-rose-400 focus:outline-none mt-6 opacity-100">
+                        <Link to={"/maintennace"} className="bg-rose-700 text-white font-bold py-2 px-10 rounded-lg shadow-lg hover:bg-rose-600 focus:outline-none mt-6 opacity-100">
                             Explore products
                         </Link>
                     </div>
@@ -79,7 +79,7 @@ const Hero = () => {
                             <h2 className="text-2xl font-bold text-gray-800 mb-4 py-2 bg-rose-300">{p.name}</h2>
                             <div className="px-6">
                                 <p className="text-4xl font-bold mb-4">{p.price}<span className="text-lg font-normal mb-4">/month</span></p>
-                                <Link to={'/maintennace'} className="w-full md:text-xl text-base md:py-3 px-4 py-2 mb-6 mt-4 text-white bg-black rounded-full hover:bg-gray-600 shadow-xl">
+                                <Link to={'/maintennace'} className="w-full md:text-xl text-base md:py-3 px-4 py-2 mb-6 mt-4 text-white bg-rose-700 rounded-lg hover:bg-rose-600 shadow-xl">
                                     Get now
                                 </Link>
                             </div>

@@ -50,8 +50,8 @@ export default function TopCategories() {
             </Carousel>
           </div>
 
-          <section className="mt-16">
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-10">
+          <section className="mt-16 text-black text-xl">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-4 md:mx-16 pb-10">
               <div className="flex flex-col items-center mb-4 md:mb-0">
                 <img src={b1} alt="Best Seller" className="w-60 h-60 rounded-lg object-cover mb-2"/>
                 <p className="text-center font-bold pt-5">Best Seller's</p>
@@ -72,7 +72,7 @@ export default function TopCategories() {
           </section>
 
           <section className="mt-8">
-            <h2 className="text-2xl font-bold mb-4">Skincare</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Skincare</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-10 mt-10">
               <div className="flex flex-col items-center mb-4 md:mb-0">
                 <img src={s1} alt="Cleansers" className="w-60 h-60 rounded-lg object-cover mb-2"/>
@@ -90,7 +90,7 @@ export default function TopCategories() {
           </section>
 
           <section className="mt-8">
-            <h2 className="text-2xl font-bold mb-4">Makeup</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Makeup</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 mt-10">
               <div className="flex flex-col items-center mb-4 md:mb-0">
                 <img src={m1} alt="Foundations" className="w-60 h-60 rounded-lg object-cover mb-2"/>
@@ -114,7 +114,7 @@ export default function TopCategories() {
           </section>
 
           <section className="mt-8">
-            <h2 className="text-2xl font-bold mb-4">Haircare</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Haircare</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-8 mt-10">
               <div className="flex flex-col items-center mb-4 md:mb-0">
                 <img src={h1} alt="Shampoos" className="w-60 h-60 rounded-lg object-cover mb-2"/>
@@ -132,7 +132,7 @@ export default function TopCategories() {
           </section>
 
           <section className="mt-8">
-            <h2 className="text-2xl font-bold mb-4">Beauty Tools & Accessories</h2>
+            <h2 className="text-2xl font-bold mb-4 text-black">Beauty Tools & Accessories</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-4 md:mx-16 pb-8 mt-10">
               <div className="flex flex-col items-center mb-4 md:mb-0">
                 <img src={ma1} alt="Brushes TopCategorieslicators" className="w-60 h-60 rounded-lg object-cover mb-2"/>

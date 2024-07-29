@@ -48,7 +48,7 @@ const VirtualTryOnPage = () => {
             the art technology allows you to try on a wide range of
             beauty products from the comfort of your home.</p>
           {/* TryOn Button */}
-          <Link to={"/maintennace"} className="bg-rose-400 px-6 py-3 font-semibold text-center rounded-sm">TRY NOW</Link>
+          <Link to={"/maintennace"} className="bg-rose-700 text-white hover:bg-rose-600 rounded-lg px-6 py-3 font-semibold text-center ">TRY NOW</Link>
         </div>
         {/* Image Compare */}
         <div className="w-full lg:w-auto">

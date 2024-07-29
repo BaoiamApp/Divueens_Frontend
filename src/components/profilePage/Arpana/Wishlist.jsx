@@ -45,8 +45,13 @@ const Wishlist = () => {
 };
 
   return (
+
     <div className="mx-auto p-8">
       <h1 className="text-2xl font-bold mb-4 flex items-center gap-2">Wishlist<div className='text-[20px] sm:text-[30px] text-rose-700 hover:text-rose-500'><FaRegHeart /></div></h1>
+
+    <div className="mx-auto p-8 w-[80%]">
+      <h1 className="text-2xl font-bold mb-4 flex items-center gap-2">Wishlist<FaHeart className='text-pink-400'/></h1>
+
       <div className="">
         {wishListItem.map((item) => {
           const isInCart = (cardItem).includes(item.id);

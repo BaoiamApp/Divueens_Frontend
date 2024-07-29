@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import orderData from "./orderData";
 import MyOrder2 from "./myOrder2";
+import rightarrow from "../../../assets/myOrders/right-arrow.png"
 
 export default function MyOrder() {
   const [myOrderData, setMyOrderData] = useState(orderData);
@@ -117,7 +118,7 @@ export default function MyOrder() {
                 <img
                   onClick={() => setIsOrderTab(false)}
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 cursor-pointer"
-                  src="/src/assets/myOrders/right-arrow.png"
+                  src={rightarrow}
                   alt="Right Arrow Icon"
                 />
                 <div className="flex justify-end mt-4 space-x-2">

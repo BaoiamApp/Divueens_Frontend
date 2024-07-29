@@ -8,7 +8,7 @@ export default function Auth({ show, changeView }) {
 
   return (
     <div className={`w-[100vw] h-[100vh] bg-black bg-opacity-50 overflow-hidden fixed top-0 z-50 ${show ? '' : 'hidden'}`}>
-      <div className="flex w-[20em] h-[50vh] absolute md:w-[50em] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] overflow-hidden max-w-[780px] bg-[#fff] rounded-[15px] [box-shadow:0px_15px_20px_rgba(0,0,0,0.1)]">
+      <div className="flex w-[20em] sm:h-[400px] absolute md:w-[50em] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] overflow-hidden max-w-[780px] bg-[#fff] rounded-[15px] [box-shadow:0px_15px_20px_rgba(0,0,0,0.1)]">
         <div className="w-1/2 h-full hidden md:block">
           <img src="/Screenshot 2024-07-26 144501.png" alt="Side Image" className="object-cover w-full h-full rounded-l-[15px]" />
         </div>
