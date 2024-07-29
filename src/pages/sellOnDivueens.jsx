@@ -1,5 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { FaAngleDown } from "react-icons/fa";
+// eslint-disable-next-line no-unused-vars
 import { FaAngleUp } from "react-icons/fa";
 import P1 from './../assets/SellOnDivueens/p1.png';
 import V1 from './../assets/SellOnDivueens/v1.png';
@@ -10,6 +13,7 @@ import {Faqs} from './FAQ';
 import { FaRegCircleQuestion } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
 
+// eslint-disable-next-line no-unused-vars
 import MaintennacePage from '../pages/MaintennacePage'; 
 import {Link} from 'react-router-dom';
 
@@ -28,6 +32,7 @@ const Sell = () => {
     setActive((pre)=> (pre === question ? null : question ));
   }
 
+  // eslint-disable-next-line no-unused-vars
   const toggleIndex = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -132,7 +137,7 @@ const Sell = () => {
       </div>
       <div style={{backgroundImage: `url(${P1})`}} className='bg-no-repeat bg-cover w-[80%] m-auto py-8 px-12 max-sm:px-4 mt-20'>
         <p className='text-2xl font-semibold text-white'>
-          As a seller on Divueens, you'll gain access to a vibrant community of beauty
+          As a seller on Divueens, you will gain access to a vibrant community of beauty
           enthusiasts and benefit from our robust marketing and sales infrastructure.
         </p>
       </div>
@@ -243,7 +248,7 @@ const Sell = () => {
         
         <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl  h-fit">
           <div className="flex flex-row items-stretch text-2xl pb-10 gap-3">
-            <FaRegCircleQuestion/>
+            <FaRegCircleQuestion className="text-rose-700"/>
             <h1 className="text-4xl font-bold ]">FAQs</h1>
           </div>
           <ul className="flex flex-col">

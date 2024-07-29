@@ -5,10 +5,11 @@ import { Navigation } from "swiper/modules";
 import { MemberShipImage } from '../../assets/assets';
 import MaintennacePage from '../../pages/MaintennacePage'; 
 import {Link} from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const MemberSection = () => {
-
+    const [email, setEmail] = useState('');
     const [swiper, setSwiper] = useState(null);
     const handleNextClick = () => swiper?.slideNext();
     const handlePrevClick = () => swiper?.slidePrev();
@@ -35,6 +36,52 @@ const MemberSection = () => {
             link: "Submit",
         },
     ]
+    const handleSubscribe = () => {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (email.trim() === '') {
+          Swal.fire({
+            title: 'Error!',
+            text: 'Please enter your email address.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              popup: 'bg-white rounded-3xl p-4',
+              title: 'text-rose-500 font-bold text-lg',
+              text: 'text-slate-800 text-sm',
+              confirmButton: 'bg-rose-500 hover:bg-rose-700 text-white rounded-3xl py-2 px-4',
+            },
+          });
+        } else if (!emailRegex.test(email)) {
+          Swal.fire({
+            title: 'Error!',
+            text: 'Please enter a valid email address.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              popup: 'bg-white rounded-3xl p-4',
+              title: 'text-rose-500 font-bold text-lg',
+              text: 'text-slate-800 text-sm',
+              confirmButton: 'bg-rose-500 hover:bg-rose-700 text-white rounded-3xl py-2 px-4',
+            },
+          }); }
+          else {
+            Swal.fire({
+              title: 'Subscription Successful!',
+              text: 'You have successfully subscribed to our newsletter.',
+              icon: 'success',
+              confirmButtonText: 'OK',
+              customClass: {
+                popup: 'bg-white rounded-3xl p-4',
+                title: 'text-rose-500 font-bold text-lg',
+                text: 'text-slate-800 text-sm',
+                confirmButton: 'bg-rose-500 hover:bg-rose-700 text-white rounded-3xl py-2 px-4',
+              },
+            });
+          }
+        };
+      
+    
+    
 
 
     return (
@@ -83,14 +130,12 @@ const MemberSection = () => {
                         <p>By using our websitte, you agree with our Term & conditions</p>
                     </div>
                     <div className="flex flex-col justify-center items-center gap-3">
-                        <input
-                            type="text"
-                            className="w-60 sm:w-80 h-[45px] outline-none rounded-3xl text-center"
-                            placeholder="Enter your email"
-                        />
-                        <button className="bg-rose-500 border-[2px] hover:border-rose-700 border-rose-700 hover:text-rose-700 hover:bg-white text-white px-8 py-2 h-[45px] rounded-3xl">
-                            Let me in
-                        </button>
+                    <input type="text"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  className="w-60 sm:w-80 h-[45px] outline-none rounded-3xl text-center"
+  placeholder="Enter your email"/>
+                        <button onClick={handleSubscribe} className="bg-rose-500 border-[2px] hover:border-rose-700 border-rose-700 hover:text-rose-700 hover:bg-rose-300 text-white w-60 sm:w-80 h-[45px] outline-none rounded-3xl text-center">Subscribe</button>
                     </div>
                 </div>
                 <div className="hidden sm:block sm:w-[65%] sm:h-full">
@@ -101,7 +146,7 @@ const MemberSection = () => {
     )
 }
 
-export default MemberSection
+export default MemberSection;
 
 
 

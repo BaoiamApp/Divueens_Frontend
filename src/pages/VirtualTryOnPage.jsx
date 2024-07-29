@@ -74,7 +74,7 @@ const VirtualTryOnPage = () => {
         
         <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl  h-fit">
           <div className="flex flex-row items-stretch text-2xl pb-10 gap-3">
-            <FaRegCircleQuestion/>
+          <FaRegCircleQuestion className="text-rose-800 font-bold "/>
             <h1 className="text-4xl font-bold ]">FAQs</h1>
           </div>
           <ul className="flex flex-col">

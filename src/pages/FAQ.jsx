@@ -1,8 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
 import { FaRegCircleQuestion } from 'react-icons/fa6';
 import { FaCircleMinus, FaCirclePlus } from 'react-icons/fa6';
 
 
+// eslint-disable-next-line react/prop-types
 export const Faqs = ({ question, active, answer, onClick }) => {
     const toggle = () => {
         onClick(question);
@@ -122,7 +124,7 @@ const faqs = [
         
         <div className="bg-white mb-12 px-12 py-8 max-sm:px-5 rounded-xl w-2/3 max-sm:w-3/4 h-fit">
           <div className="flex flex-row items-center text-2xl pb-10 gap-3">
-            <FaRegCircleQuestion/>
+            <FaRegCircleQuestion className="text-rose-800 font-bold "/>
             <h1 className="text-4xl font-bold ]">FAQs</h1>
           </div>
           <ul className="flex flex-col">

@@ -1,16 +1,19 @@
 import  { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaRegHeart} from 'react-icons/fa';
 import { FaHeart} from 'react-icons/fa';
 import Trash from '../../../assets/trash.png';
 import Share from '../../../assets/share.png';
 import productData from '../../ProductList/ProductListItemData';
 import {CartContext} from '../../../context/CartContext';
+// eslint-disable-next-line no-unused-vars
 import Cart from '../../ProductList/AddToCart';
 
 const Wishlist = () => {
   const {addCartItemNumber , subCartItemNumber} = useContext(CartContext)
   const [wishlist, setWishlist] = useState([]);
   const [wishListItem , setWishListItem] = useState(productData)
+  // eslint-disable-next-line no-unused-vars
   const [addCartItemList , setCartItemList] = useState([...new Set(JSON.parse(localStorage.getItem('wishlist')))] || [])
 
   useEffect(() => {
@@ -43,14 +46,14 @@ const Wishlist = () => {
 
   return (
     <div className="mx-auto p-8">
-      <h1 className="text-2xl font-bold mb-4 flex items-center gap-2">Wishlist<FaHeart className='text-pink-400'/></h1>
+      <h1 className="text-2xl font-bold mb-4 flex items-center gap-2">Wishlist<div className='text-[20px] sm:text-[30px] text-rose-700 hover:text-rose-500'><FaRegHeart /></div></h1>
       <div className="">
         {wishListItem.map((item) => {
           const isInCart = (cardItem).includes(item.id);
           console.log(isInCart)
           return (
-          <div key={item.id} className="border-2 border-pink-300 mb-4 flex">
-            <div className=" p-3 border-r-2 border-pink-300 w-64 ">
+          <div key={item.id} className="border-2 border-rose-300 mb-4 flex">
+            <div className=" p-3 border-r-2 border-rose-300 w-64 ">
               <img
                 src={item.image}
                 alt="image"
@@ -77,7 +80,7 @@ const Wishlist = () => {
               </div>
               <div className="font-semibold text-[0.8rem] sm:text-sm md:text-base lg:text-lg my-3 ">MRP: ₹ {item.price}</div>
               <div className="flex  sm:gap-4 gap-2 lg:-bottom-4 xl:-bottom-2 left-0 right-0">
-                <button className="bg-pink-400 font-bold  text-white  rounded-2xl text-[0.7rem]  px-6 py-1  lg:text-base" onClick={() => {
+                <button className="bg-rose-500 font-bold  text-white  rounded-2xl text-[0.7rem]  px-6 py-1  lg:text-base" onClick={() => {
                   if (isInCart) {
                     subCartItemNumber()
                     addingItemToCart(item.id)}
@@ -90,7 +93,7 @@ const Wishlist = () => {
             </div>
             <div className="flex items-center justify-between text-white px-3">
                   <div  className="text-[0.9rem] cursor-pointer w-[20px]"  onClick={() => handleRemoveFromWishlist(item.id)}>
-                  <img src={Trash}  className='md:h-8 h-6' />  
+                  <img src={Trash}  className='md:h-8 w-6' />  
                     {/* <FaTrash className='h-' /> */}
                   </div>
                 </div>
